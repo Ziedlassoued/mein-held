@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+
 *,
 *::before,
 *::after {
@@ -14,8 +16,8 @@
   --color-text-secondary: white;
 
   /* Typography */
-  --font-primary: 'Roboto', sans-serif;
-  --font-text: 'Roboto', sans-serif;
+  --font-primary: 'Open Sans', sans-serif;
+  --font-headline: 'Roboto Mono', monospace;
 
   /* Misc */
   --border-radius: 20px;
@@ -25,4 +27,16 @@ body {
   margin: 0;
   padding: 0;
   background: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-headline);
+}
+
+p {
+  font-family: var(--font-primary);
 }

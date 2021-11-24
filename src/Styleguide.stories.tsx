@@ -6,4 +6,4 @@ export default {
   title: 'Styleguide',
 };
 
-export const Basics = () => <Styleguide />;
+export const Default = () => <Styleguide />;
