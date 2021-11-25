@@ -13,7 +13,6 @@ function App() {
   return (
     <div className={styles.app}>
       <NavBar />
-      <p>Mein Held</p>
       <p>{message}</p>
     </div>
   );
