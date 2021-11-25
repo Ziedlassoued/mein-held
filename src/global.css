@@ -1,9 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+:root {
+  /* COLORS */
+  --color-primary: #333;
+  --color-secondary: #ededed;
+  --color-tertiary: #ff7e21;
+  --color-background: #fff;
+  --color-text-paragraph: #000;
+
+  /* Typography */
+  --font-primary: 'Roboto', sans-serif;
+  --font-headline: 'Roboto Mono', monospace;
+
+  /* Misc */
+  --border-radius: 20px;
+}
+
 body {
   margin: 0;
+  padding: 0;
+  background: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-headline);
+}
+
+p {
+  font-family: var(--font-primary);
 }
