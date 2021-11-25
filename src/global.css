@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
 *,
 *::before,
@@ -8,15 +8,14 @@
 
 :root {
   /* COLORS */
-  --color-primary: #ff7e21;
-  --color-secondary: #000;
-  --color-tertiary: white;
-  --color-background: #ededed;
-  --color-text-primary: #000;
-  --color-text-secondary: white;
+  --color-primary: #333;
+  --color-secondary: #ededed;
+  --color-tertiary: #ff7e21;
+  --color-background: #fff;
+  --color-text-paragraph: #000;
 
   /* Typography */
-  --font-primary: 'Open Sans', sans-serif;
+  --font-primary: 'Roboto', sans-serif;
   --font-headline: 'Roboto Mono', monospace;
 
   /* Misc */

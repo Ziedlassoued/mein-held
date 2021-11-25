@@ -38,7 +38,7 @@ function Styleguide() {
           style={{
             width: 30,
             height: 30,
-            border: '1px solid white',
+            border: '1px solid black',
             background: 'var(--color-background)',
             borderRadius: '50%',
           }}
@@ -47,7 +47,7 @@ function Styleguide() {
           style={{
             width: 30,
             height: 30,
-            background: 'var(--color-text-primary)',
+            background: 'var(--color-text-paragraph)',
             borderRadius: '50%',
           }}
         />
@@ -76,7 +76,7 @@ function Styleguide() {
       >
         <div
           style={{
-            width: 30,
+            width: 100,
             height: 30,
             background: 'var(--color-primary)',
             borderRadius: 'var(--border-radius)',
@@ -86,7 +86,7 @@ function Styleguide() {
           style={{
             width: 100,
             height: 30,
-            background: 'var(--color-primary)',
+            background: 'var(--color-tertiary)',
             borderRadius: 'var(--border-radius)',
           }}
         />
