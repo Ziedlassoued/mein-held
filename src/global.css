@@ -40,3 +40,8 @@ h5 {
 p {
   font-family: var(--font-primary);
 }
+
+i,
+a {
+  font-family: var(--font-headline);
+}
