@@ -24,9 +24,17 @@ function NavBar(): JSX.Element {
       </ul>
       <button className={styles.btn} onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? (
-          <i className="fas fa-times"></i>
+          <img
+            className={styles.iconClose}
+            src="src/assets/close.png"
+            alt="close"
+          />
         ) : (
-          <i className="fas fa-bars"></i>
+          <img
+            className={styles.iconMobile}
+            src="src/assets/burgermenu.png"
+            alt="menu"
+          />
         )}
       </button>
     </nav>
