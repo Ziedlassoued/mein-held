@@ -32,6 +32,14 @@
   cursor: pointer;
 }
 
+.items:hover {
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 5px;
+  transition: all 0.5s ease-out;
+}
+
 .btn {
   display: none;
 }
@@ -53,15 +61,18 @@
     display: block;
     list-style: none;
     background-color: var(--color-secondary);
-    left: 0;
-    top: 75px;
+    top: 4.5rem;
+    padding: 0;
+    margin: 0;
     transition: all 0.5s ease-out;
     width: 100%;
   }
 
   .items {
+    display: grid;
     color: var(--color-primary);
-    padding: 1rem;
+    margin: auto;
+    padding: 1.5rem 1rem 0;
     width: 100%;
     transition: all 0.5s ease;
     border-bottom: 1px solid var(--color-primary);
