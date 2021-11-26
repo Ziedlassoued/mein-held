@@ -2,8 +2,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 75px;
+  height: 6rem;
   background-color: var(--color-secondary);
+}
+
+.imageLogo {
+  width: 70px;
 }
 
 .logo {
@@ -45,10 +49,20 @@
 }
 
 @media screen and (max-width: 780px) {
+  .navBar {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1.5rem;
+  }
+
   .logo {
     display: flex;
-    position: absolute;
-    left: 2rem;
+    position: relative;
+  }
+
+  .imageLogo {
+    width: 70px;
+    margin-left: 0.5rem;
   }
 
   .list {

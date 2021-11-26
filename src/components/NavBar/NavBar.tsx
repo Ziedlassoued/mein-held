@@ -6,6 +6,11 @@ function NavBar(): JSX.Element {
 
   return (
     <nav className={styles.navBar}>
+      <img
+        className={styles.imageLogo}
+        src="src/assets/constructionman.png"
+        alt="logo"
+      />
       <h1 className={styles.logo}>Mein Held</h1>
       <ul
         className={isMobile ? styles.listMobile : styles.list}
