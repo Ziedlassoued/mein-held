@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './App.module.css';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -11,7 +12,7 @@ function App() {
   }, []);
   return (
     <div className={styles.app}>
-      <p>Mein Held</p>
+      <NavBar />
       <p>{message}</p>
     </div>
   );
