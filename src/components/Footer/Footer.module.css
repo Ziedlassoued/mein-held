@@ -1,0 +1,95 @@
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list {
+  list-style: none;
+}
+
+.footer {
+  background: var(--color-secondary);
+  padding: 70px o;
+}
+
+.col {
+  width: 25%;
+  padding: 0 1rem;
+}
+
+.col h4 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.col h4::before {
+  content: '';
+  position: absolute;
+  left: 1;
+  bottom: -10px;
+  background-color: var(--color-tertiary);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.col .list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.col .socialMedia i {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--color-primary);
+  transition: all 0.5s ease;
+}
+
+.col .list li a {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.col .socialMedia i:hover {
+  color: var(--color-primary);
+  background-color: var(--color-tertiary);
+}
+
+.col .list li a:hover {
+  color: var(--color-tertiary);
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 780px) {
+  .col {
+    width: 50%;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 550px) {
+  .col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
