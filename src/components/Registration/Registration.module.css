@@ -1,0 +1,66 @@
+.wrapper {
+  background-color: var(--color-secondary);
+  font-family: var(--font-headline);
+}
+
+.wrapper h2,
+h3,
+p {
+  text-align: left;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'p p d d'
+    '. m d d'
+    'a . d d';
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 30px;
+}
+
+.publicity {
+  grid-area: p;
+}
+
+.MobileView {
+  grid-area: m;
+  justify-items: left;
+}
+
+.DesktopView {
+  grid-area: d;
+}
+
+.application {
+  grid-area: a;
+  width: 75%;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--font-headline);
+  cursor: pointer;
+}
+
+.application:hover {
+  background: var(--color-tertiary);
+  color: var(--color-secondary);
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    grid-template-areas:
+      'p m m m'
+      '. . . .'
+      'd d . .'
+      'a a . .';
+    gap: 10px;
+  }
+
+  .DesktopView {
+    grid-area: d;
+    width: 300px;
+  }
+}
