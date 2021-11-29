@@ -1,7 +1,11 @@
-.iconScrollUp {
-  width: 40px;
-}
-
 .button {
   border: none;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.iconScrollUp {
+  width: 40px;
+  border-radius: 50%;
 }

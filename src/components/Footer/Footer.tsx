@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import Scroll from './ScrollToTop/ScrollToTop';
 
 function Footer(): JSX.Element {
   return (
@@ -47,6 +48,7 @@ function Footer(): JSX.Element {
             </div>
           </div>
         </div>
+        <Scroll />
       </div>
     </footer>
   );
