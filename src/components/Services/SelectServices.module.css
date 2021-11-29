@@ -1,7 +1,6 @@
 .container {
   background: var(--color-secondary);
   font-family: var(--font-headline);
-  padding: 0 0 0 10px;
 }
 
 .container h2 {
@@ -24,4 +23,33 @@
   cursor: pointer;
   text-align: left;
   color: var(--color-primary);
+}
+
+.items {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-rows: auto;
+  row-gap: 2px;
+  padding: 10px;
+  margin: 2rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 850px) {
+  .services {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .services {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20%;
+  }
+
+  .services a {
+    height: 1.5rem;
+  }
 }

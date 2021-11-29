@@ -6,21 +6,57 @@ function SelectServices() {
     <section className={styles.container}>
       <h2>Services</h2>
       <div className={styles.services}>
-        <a href="#">
-          elektriker
-          <img src="scr/assets/servicesIcon/elektriker.png" alt="elektriker" />
-        </a>
-        <a href="#">schreiner</a>
-        <a href="#">dachdecker</a>
-        <a href="#">smarthome</a>
-        <a href="#">maler</a>
-        <a href="#">klempner</a>
-        <a href="#">küchenbau</a>
-        <a href="#">sanitär</a>
-        <a href="#">gärtner</a>
-        <a href="#">fliesenleger</a>
-        <a href="#">maurer</a>
-        <a href="#">bodenleger</a>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/elektriker.png" alt="elektriker" />
+          <a href="#">elektriker</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/schreiner.png" alt="schreiner" />
+          <a href="#">schreiner</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/dachdecker.png" alt="elektriker" />
+          <a href="#">dachdecker</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/smarthome.png" alt="elektriker" />
+          <a href="#">smarthome</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/maler.png" alt="elektriker" />
+          <a href="#">maler</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/klempner.png" alt="elektriker" />
+          <a href="#">klempner</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/kuechenbau.png" alt="kuechenbau" />
+          <a href="#">küchenbau</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/sanitaer.png" alt="sanitaer" />
+          <a href="#">sanitär</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/gaertner.png" alt="gaertner" />
+          <a href="#">gärtner</a>
+        </div>
+        <div className={styles.items}>
+          <img
+            src="src/assets/servicesIcon/fliesenleger.png"
+            alt="fliesenleger"
+          />
+          <a href="#">fliesenleger</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/maurer.png" alt="maurer" />
+          <a href="#">maurer</a>
+        </div>
+        <div className={styles.items}>
+          <img src="src/assets/servicesIcon/bodenleger.png" alt="bodenleger" />
+          <a href="#">bodenleger</a>
+        </div>
       </div>
     </section>
   );
