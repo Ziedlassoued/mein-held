@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './SelectServices.module.css';
+import Elektriker from './Elektriker/Elektriker';
 
 function SelectServices() {
   return (
     <section className={styles.container}>
       <h2>Services</h2>
       <div className={styles.services}>
-        <div className={styles.items}>
-          <img src="src/assets/servicesIcon/elektriker.png" alt="elektriker" />
-          <a href="#">elektriker</a>
+        <div>
+          <Elektriker />
         </div>
         <div className={styles.items}>
           <img src="src/assets/servicesIcon/schreiner.png" alt="schreiner" />
