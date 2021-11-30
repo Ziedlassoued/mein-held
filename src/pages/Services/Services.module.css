@@ -1,0 +1,10 @@
+.container {
+  background-color: var(--color-secondary);
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--color-primary);
+  background-color: var(--color-tertiary);
+  text-align: left;
+}

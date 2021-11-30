@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Elektriker.module.css';
 
-function Elektriker() {
+function Elektriker(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/elektriker.png" alt="elektriker" />

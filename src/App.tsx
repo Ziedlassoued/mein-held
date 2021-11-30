@@ -3,7 +3,7 @@ import styles from './App.module.css';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import Registration from './components/Registration/Registration';
-import SelectServices from './components/Services/SelectServices';
+import Services from './pages/Services/Services';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -17,7 +17,7 @@ function App() {
     <div className={styles.app}>
       <NavBar />
       <p>{message}</p>
-      <SelectServices />
+      <Services />
       <Registration />
       <Footer />
     </div>
