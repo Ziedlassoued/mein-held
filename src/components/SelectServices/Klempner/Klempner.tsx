@@ -5,7 +5,7 @@ function Klempner(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Klempner.png" alt="Klempner" />
-      <a href="#">Klempner</a>
+      <a href="src/pages/KlempnerList">Klempner</a>
     </div>
   );
 }

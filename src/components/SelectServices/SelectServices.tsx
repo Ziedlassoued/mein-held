@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './SelectServices.module.css';
 import Elektriker from './Elektriker/Elektriker';
-import { Link } from 'react-router-dom';
 import Schreiner from './Schreiner/Schreiner';
 import Dachdecker from './Dachdecker/Dachdecker';
 import Smarthome from './Smarthome/Smarthome';
@@ -20,64 +19,40 @@ function SelectServices() {
       <h2>Services</h2>
       <div className={styles.services}>
         <div>
-          <Link to="/Elektriker">
-            <Elektriker />
-          </Link>
+          <Elektriker />
         </div>
         <div>
-          <Link to="/Schreiner">
-            <Schreiner />
-          </Link>
+          <Schreiner />
         </div>
         <div>
-          <Link to="/Dachdecker">
-            <Dachdecker />
-          </Link>
+          <Dachdecker />
         </div>
         <div>
-          <Link to="/Smarthome">
-            <Smarthome />
-          </Link>
+          <Smarthome />
         </div>
         <div>
-          <Link to="/Maler">
-            <Maler />
-          </Link>
+          <Maler />
         </div>
         <div>
-          <Link to="/Klempner">
-            <Klempner />
-          </Link>
+          <Klempner />
         </div>
         <div>
-          <Link to="/Kuechenbau">
-            <Kuechenbau />
-          </Link>
+          <Kuechenbau />
         </div>
         <div>
-          <Link to="/Sanitaer">
-            <Sanitaer />
-          </Link>
+          <Sanitaer />
         </div>
         <div>
-          <Link to="/Gaertner">
-            <Gaertner />
-          </Link>
+          <Gaertner />
         </div>
         <div>
-          <Link to="/Fliesenleger">
-            <Fliesenleger />
-          </Link>
+          <Fliesenleger />
         </div>
         <div>
-          <Link to="/Maurer">
-            <Maurer />
-          </Link>
+          <Maurer />
         </div>
         <div>
-          <Link to="/Bodenleger">
-            <Bodenleger />
-          </Link>
+          <Bodenleger />
         </div>
       </div>
     </section>

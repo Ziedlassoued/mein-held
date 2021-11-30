@@ -5,7 +5,7 @@ function Smarthome(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Smarthome.png" alt="Smarthome" />
-      <a href="#">Smarthome</a>
+      <a href="src/pages/Smarthome">Smarthome</a>
     </div>
   );
 }

@@ -5,7 +5,7 @@ function Elektriker(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/elektriker.png" alt="elektriker" />
-      <a href="#">elektriker</a>
+      <a href="src/pages/ElektrikerList">elektriker</a>
     </div>
   );
 }

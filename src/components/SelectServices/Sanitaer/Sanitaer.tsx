@@ -5,7 +5,7 @@ function Sanitaer(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Sanitaer.png" alt="Sanitaer" />
-      <a href="#">Sanitär</a>
+      <a href="src/pages/SanitaerList">Sanitär</a>
     </div>
   );
 }

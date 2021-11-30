@@ -5,7 +5,7 @@ function Maler(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Maler.png" alt="Maler" />
-      <a href="#">Maler</a>
+      <a href="src/pages/MalerList">Maler</a>
     </div>
   );
 }

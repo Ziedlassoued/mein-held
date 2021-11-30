@@ -5,7 +5,7 @@ function Bodenleger(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Bodenleger.png" alt="Bodenleger" />
-      <a href="#">Bodenleger</a>
+      <a href="src/pages/BodenlegerList">Bodenleger</a>
     </div>
   );
 }

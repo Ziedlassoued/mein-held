@@ -5,7 +5,7 @@ function Kuechenbau(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Kuechenbau.png" alt="Kuechenbau" />
-      <a href="#">Kuechenbau</a>
+      <a href="src/pages/KuechenbauList">Kuechenbau</a>
     </div>
   );
 }
