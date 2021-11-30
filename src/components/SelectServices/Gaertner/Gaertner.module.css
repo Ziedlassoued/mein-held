@@ -1,0 +1,14 @@
+.items {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-rows: auto;
+  row-gap: 2px;
+  padding: 10px;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.items:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}
