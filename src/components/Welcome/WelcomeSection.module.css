@@ -1,0 +1,55 @@
+.welcome {
+  background-color: var(--color-secondary);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.images {
+  height: 100%;
+  width: 100%;
+}
+
+.btnWelcome {
+  width: 500px;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--font-headline);
+  cursor: pointer;
+}
+
+.btnPartner {
+  width: 50%;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--font-headline);
+  cursor: pointer;
+}
+
+.btnPartner:hover {
+  background: var(--color-tertiary);
+  color: var(--color-secondary);
+  transition: all 0.5s ease-out;
+}
+
+.btnWelcome:hover {
+  background: var(--color-tertiary);
+  color: var(--color-secondary);
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 375px) {
+  .btnWelcome {
+    width: 375px;
+    height: 3.5rem;
+  }
+
+  .btnPartner {
+    width: 75%;
+    height: 3.5rem;
+  }
+}
