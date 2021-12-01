@@ -4,15 +4,22 @@ import styles from './WelcomeSection.module.css';
 function WelcomeSection(): JSX.Element {
   return (
     <section className={styles.welcome}>
-      <button>Jetzt die besten Handwerker finden</button>
+      <button className={styles.btnWelcome}>
+        Jetzt die besten Handwerker finden
+      </button>
       <div className={styles.container}>
         <img
+          className={styles.images}
           src="src/assets/Handwerker_gesucht.jpeg"
           alt="handwerker gesucht"
         />
         <div>
-          <img src="src/assets/Handwerker_welcome.jpeg" alt="welcome" />
-          <button>Partner werden</button>
+          <img
+            className={styles.images}
+            src="src/assets/Handwerker_welcome.jpeg"
+            alt="welcome"
+          />
+          <button className={styles.btnPartner}>Partner werden</button>
         </div>
       </div>
     </section>
