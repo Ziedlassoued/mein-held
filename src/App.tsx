@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './App.module.css';
-import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
-import Registration from './components/Registration/Registration';
-import SelectServices from './components/SelectServices/SelectServices';
-import WelcomeSection from './components/Welcome/WelcomeSection';
+import LandingPage from './pages/LandingPage/LandingPage';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -16,12 +12,8 @@ function App() {
   }, []);
   return (
     <div className={styles.app}>
-      <NavBar />
-      <WelcomeSection />
+      <LandingPage />
       <p>{message}</p>
-      <SelectServices />
-      <Registration />
-      <Footer />
     </div>
   );
 }
