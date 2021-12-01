@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 
-export default function SmarthomeList() {
+function SmarthomeList(): JSX.Element {
   return (
     <div>
       <NavBar />
@@ -10,3 +10,4 @@ export default function SmarthomeList() {
     </div>
   );
 }
+export default SmarthomeList;

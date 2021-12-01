@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 
-export default function MaurerList() {
+function MaurerList(): JSX.Element {
   return (
     <div>
       <NavBar />
@@ -10,3 +10,4 @@ export default function MaurerList() {
     </div>
   );
 }
+export default MaurerList;

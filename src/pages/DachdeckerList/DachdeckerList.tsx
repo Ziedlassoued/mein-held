@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 
-export default function DachdeckerList() {
+function DachdeckerList(): JSX.Element {
   return (
     <div>
       <NavBar />
@@ -10,3 +10,4 @@ export default function DachdeckerList() {
     </div>
   );
 }
+export default DachdeckerList;

@@ -5,7 +5,8 @@ import Registration from '../../components/Registration/Registration';
 import SelectServices from '../../components/SelectServices/SelectServices';
 import WelcomeSection from '../../components/Welcome/WelcomeSection';
 import styles from './LandingPage.module.css';
-function LandingPage() {
+
+function LandingPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
