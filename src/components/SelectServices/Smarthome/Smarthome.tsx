@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Smarthome.module.css';
 
 function Smarthome(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Smarthome.png" alt="Smarthome" />
-      <a href="src/pages/Smarthome">Smarthome</a>
+      <Link to={'/SmarthomeList'}>Smarthome</Link>
     </div>
   );
 }

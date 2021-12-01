@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Klempner.module.css';
 
 function Klempner(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Klempner.png" alt="Klempner" />
-      <a href="src/pages/KlempnerList">Klempner</a>
+      <Link to={'/KlempnerList'}>Klempner</Link>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Registration.module.css';
 
 function Registration(): JSX.Element {
@@ -21,7 +22,9 @@ function Registration(): JSX.Element {
           src="src/assets/Desktop_calendar.png"
           alt="Desktop calendar"
         />
-        <button className={styles.application}>Partner werden</button>
+        <Link to={'/registration'} className={styles.application}>
+          Partner werden
+        </Link>
       </div>
     </section>
   );

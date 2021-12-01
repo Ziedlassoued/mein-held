@@ -1,5 +1,13 @@
 import React from 'react';
+import Footer from '../../components/Footer/Footer';
+import NavBar from '../../components/NavBar/NavBar';
 
-export default function ElektrikerList() {
-  return <div>Welcome</div>;
+function ElektrikerList(): JSX.Element {
+  return (
+    <div>
+      <NavBar />
+      <Footer />
+    </div>
+  );
 }
+export default ElektrikerList;

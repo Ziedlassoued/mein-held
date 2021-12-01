@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Sanitaer.module.css';
 
 function Sanitaer(): JSX.Element {
   return (
     <div className={styles.items}>
       <img src="src/assets/servicesIcon/Sanitaer.png" alt="Sanitaer" />
-      <a href="src/pages/SanitaerList">Sanitär</a>
+      <Link to={'/SanitaerList'}>Sanitär</Link>
     </div>
   );
 }
