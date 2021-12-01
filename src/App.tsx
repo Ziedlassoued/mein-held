@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ElektrikerList from './pages/ElektrikerList/ElektrikerList';
 import BodenlegerList from './pages/BodenlegerList/BodenlegerList';
-import Registration from './components/Registration/Registration';
+import SignUpForm from './pages/SignUpForm/SignUpForm';
 
 function App() {
   // const [message, setMessage] = useState('');
@@ -20,8 +20,9 @@ function App() {
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/ElektrikerList" element={<ElektrikerList />}></Route>
         <Route path="/Bodenlegerlist" element={<BodenlegerList />}></Route>
-        <Route path="/registration" element={<Registration />}></Route>
+        <Route path="/registration" element={<SignUpForm />}></Route>
       </Routes>
+      <SignUpForm />
     </Router>
   );
 }
