@@ -42,7 +42,7 @@ function SignUpForm() {
       <div className={styles.main}>
         <div className={styles.container}>
           <div>
-            <h3 className={styles.title}>Formular</h3>
+            <h3 className={styles.title}>Anmeldung</h3>
           </div>
           <form onSubmit={submitForm}>
             <div className={styles.companyDetails}>
@@ -79,7 +79,11 @@ function SignUpForm() {
               </div>
               <div className={styles.inputBox}>
                 <span className={styles.details}>Email</span>
-                <input placeholder="Email" {...register('email')} />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  {...register('email')}
+                />
                 <p> {errors.email?.message} </p>
               </div>
               <div className={styles.inputBox}>
@@ -104,12 +108,17 @@ function SignUpForm() {
               </div>
               <div className={styles.inputBox}>
                 <span className={styles.details}>Passwort</span>
-                <input placeholder="Passwort" {...register('password')} />
+                <input
+                  type="password"
+                  placeholder="Passwort"
+                  {...register('password')}
+                />
                 <p> {errors.password?.message} </p>
               </div>
               <div className={styles.inputBox}>
                 <span className={styles.details}>Passwort bestätigen</span>
                 <input
+                  type="password"
                   placeholder="Passwort bestätigen"
                   {...register('confirmPassword')}
                 />
