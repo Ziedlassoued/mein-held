@@ -1,55 +1,69 @@
-import React, { FormEvent, useState } from 'react';
+import React from 'react';
 import styles from './SignUpForm.module.css';
 
 function SignUpForm(): JSX.Element {
-  const [values, setValues] = useState({
-    fullname: '',
-    email: '',
-    password: '',
-  });
-
-  const handleFormSubmit = (event: FormEvent) => {
-    event.preventDefault();
-  };
   return (
     <div className={styles.container}>
-      <div className={styles.appWrapper}>
-        <div>
-          <h2 className={styles.title}>Create Account</h2>
-        </div>
+      <div className={styles.title}>
+        <h2>konto erstellen</h2>
+      </div>
+      <div className={styles.inputs}>
         <form className={styles.formWrapper}>
           <div className={styles.name}>
-            <label className={styles.label}>Full Name</label>
+            <label className={styles.label}>First Name</label>
             <input
               className={styles.input}
               type="text"
-              name="fullname"
-              value={values.fullname}
+              name="firstname"
+              placeholder="First Name"
+            />
+          </div>
+          <div className={styles.lastname}>
+            <label className={styles.label}>Last Name</label>
+            <input
+              className={styles.input}
+              type="text"
+              name="lastname"
+              placeholder="Last Name"
             />
           </div>
           <div className={styles.email}>
             <label className={styles.label}>Email</label>
             <input
               className={styles.input}
-              type="email"
+              type="text"
               name="email"
-              value={values.email}
+              placeholder="Email"
+            />
+          </div>
+          <div className={styles.age}>
+            <label className={styles.label}>Age</label>
+            <input
+              className={styles.input}
+              type="text"
+              name="age"
+              placeholder="Age"
             />
           </div>
           <div className={styles.password}>
             <label className={styles.label}>Password</label>
             <input
               className={styles.input}
-              type="password"
+              type="text"
               name="password"
-              value={values.password}
+              placeholder="password"
             />
           </div>
-          <div>
-            <button className={styles.submit} onClick={handleFormSubmit}>
-              {setValues} Sign Up
-            </button>
+          <div className={styles.confirmPassword}>
+            <label className={styles.label}>Confirm Password</label>
+            <input
+              className={styles.input}
+              type="text"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+            />
           </div>
+          <input type="submit" id="submit" />
         </form>
       </div>
     </div>
