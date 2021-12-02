@@ -22,7 +22,6 @@ function App() {
         <Route path="/Bodenlegerlist" element={<BodenlegerList />}></Route>
         <Route path="/registration" element={<SignUpForm />}></Route>
       </Routes>
-      <SignUpForm />
     </Router>
   );
 }
