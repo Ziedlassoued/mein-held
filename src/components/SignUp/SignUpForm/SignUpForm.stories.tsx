@@ -3,10 +3,7 @@ import SignUpForm from './SignUpForm';
 
 export default {
   component: SignUpForm,
-  title: 'Pages/SignUpForm',
-  parameters: {
-    layout: 'fullscreen',
-  },
+  title: 'SignUpForm',
 };
 
 export const Default = () => <SignUpForm />;
