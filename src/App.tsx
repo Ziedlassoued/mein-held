@@ -2,7 +2,7 @@
 import React from 'react';
 import LandingPage from './pages/LandingPage/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ElektrikerList from './pages/Services/FliesenlegerList/ElektrikerList/ElektrikerList';
+import ElektrikerList from './pages/Services/ElektrikerList/ElektrikerList';
 import BodenlegerList from './pages/Services/BodenlegerList/BodenlegerList';
 import SignUpForm from './components/SignUp/SignUpForm/SignUpForm';
 import SchreinerList from './pages/Services/SchreinerList/SchreinerList';

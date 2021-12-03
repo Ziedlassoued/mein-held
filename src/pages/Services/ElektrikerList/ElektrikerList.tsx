@@ -1,9 +1,9 @@
 import React from 'react';
 import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
-import styles from './MalerList.module.css';
+import styles from './ElektrikerList.module.css';
 
-function MalerList(): JSX.Element {
+function ElektrikerList(): JSX.Element {
   return (
     <div className={styles.container}>
       <NavBar />
@@ -11,4 +11,4 @@ function MalerList(): JSX.Element {
     </div>
   );
 }
-export default MalerList;
+export default ElektrikerList;
