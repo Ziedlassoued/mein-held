@@ -2,19 +2,19 @@
 import React from 'react';
 import LandingPage from './pages/LandingPage/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ElektrikerList from './pages/ElektrikerList/ElektrikerList';
-import BodenlegerList from './pages/BodenlegerList/BodenlegerList';
+import ElektrikerList from './pages/Services/FliesenlegerList/ElektrikerList/ElektrikerList';
+import BodenlegerList from './pages/Services/BodenlegerList/BodenlegerList';
 import SignUpForm from './components/SignUp/SignUpForm/SignUpForm';
-import SchreinerList from './pages/SchreinerList/SchreinerList';
-import DachdeckerList from './pages/DachdeckerList/DachdeckerList';
+import SchreinerList from './pages/Services/SchreinerList/SchreinerList';
+import DachdeckerList from './pages/Services/DachdeckerList/DachdeckerList';
 import Smarthome from './components/SelectServices/Smarthome/Smarthome';
-import MalerList from './pages/MalerList/MalerList';
-import KlempnerList from './pages/KlempnerList/KlempnerList';
+import MalerList from './pages/Services/MalerList/MalerList';
+import KlempnerList from './pages/Services/KlempnerList/KlempnerList';
 import Kuechenbau from './components/SelectServices/Kuechenbau/Kuechenbau';
 import Sanitaer from './components/SelectServices/Sanitaer/Sanitaer';
-import GaertnerList from './pages/GaertnerList/GaertnerList';
-import FliesenlegerList from './pages/FliesenlegerList/FliesenlegerList';
-import MaurerList from './pages/MaurerList/MaurerList';
+import GaertnerList from './pages/Services/GaertnerList/GaertnerList';
+import FliesenlegerList from './pages/Services/FliesenlegerList/FliesenlegerList';
+import MaurerList from './pages/Services/MaurerList/MaurerList';
 import LoginPartner from './pages/Login/LoginPartner';
 
 function App() {
