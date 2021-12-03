@@ -5,6 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import NavBar from '../../NavBar/NavBar';
 import Footer from '../../Footer/Footer';
+import { Link } from 'react-router-dom';
 
 const schema = yup.object().shape({
   companyName: yup.string().required('bitte Firmen Name eingeben'),
@@ -132,7 +133,10 @@ function SignUpForm() {
             </div>
             <span className={styles.member}>
               Haben Sie bereits ein Konto? <br />
-              Login <a href="#">hier</a>
+              Login {''}
+              <Link to="/loginpartner" className={styles.link}>
+                hier
+              </Link>
             </span>
           </form>
         </div>

@@ -15,6 +15,7 @@ import Sanitaer from './components/SelectServices/Sanitaer/Sanitaer';
 import GaertnerList from './pages/GaertnerList/GaertnerList';
 import FliesenlegerList from './pages/FliesenlegerList/FliesenlegerList';
 import MaurerList from './pages/MaurerList/MaurerList';
+import LoginPartner from './pages/Login/LoginPartner';
 
 function App() {
   // const [message, setMessage] = useState('');
@@ -42,6 +43,7 @@ function App() {
         <Route path="/Bodenlegerlist" element={<BodenlegerList />}></Route>
         <Route path="/registration" element={<SignUpForm />}></Route>
         <Route path="/geschaeftspartner" element={<SignUpForm />}></Route>
+        <Route path="/loginpartner" element={<LoginPartner />}></Route>
       </Routes>
     </Router>
   );
