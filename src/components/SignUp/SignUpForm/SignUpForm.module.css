@@ -90,6 +90,11 @@ form .btn {
   margin: 45px 0;
 }
 
+.member a {
+  text-decoration: none;
+  color: var(--color-tertiary);
+}
+
 @media (max-width: 584px) {
   .container {
     max-width: 100%;

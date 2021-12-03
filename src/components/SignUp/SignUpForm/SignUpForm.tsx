@@ -3,8 +3,8 @@ import styles from './SignUpForm.module.css';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
+import NavBar from '../../NavBar/NavBar';
+import Footer from '../../Footer/Footer';
 
 const schema = yup.object().shape({
   companyName: yup.string().required('bitte Firmen Name eingeben'),
@@ -130,6 +130,10 @@ function SignUpForm() {
                 <input type="submit" id="submit" value="Anmelden" />
               </div>
             </div>
+            <span className={styles.member}>
+              Haben Sie bereits ein Konto? <br />
+              Login <a href="#">hier</a>
+            </span>
           </form>
         </div>
       </div>

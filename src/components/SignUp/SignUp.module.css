@@ -1,0 +1,9 @@
+.container {
+  margin: 100px auto;
+  width: 1000px;
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

@@ -4,7 +4,7 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ElektrikerList from './pages/ElektrikerList/ElektrikerList';
 import BodenlegerList from './pages/BodenlegerList/BodenlegerList';
-import SignUpForm from './pages/SignUpForm/SignUpForm';
+import SignUpForm from './components/SignUp/SignUpForm/SignUpForm';
 
 function App() {
   // const [message, setMessage] = useState('');
