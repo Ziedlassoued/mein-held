@@ -35,6 +35,11 @@ p {
 
 .application {
   grid-area: a;
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 2.9rem;
   width: 75%;
   height: 3rem;
   border-radius: 5px;
@@ -44,8 +49,7 @@ p {
 }
 
 .application:hover {
-  background: var(--color-tertiary);
-  color: var(--color-secondary);
+  background: linear-gradient(135deg, orange, #ededed);
   transition: all 0.5s ease-out;
 }
 

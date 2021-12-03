@@ -41,6 +41,7 @@ function App() {
         <Route path="/MaurerList" element={<MaurerList />}></Route>
         <Route path="/Bodenlegerlist" element={<BodenlegerList />}></Route>
         <Route path="/registration" element={<SignUpForm />}></Route>
+        <Route path="/geschaeftspartner" element={<SignUpForm />}></Route>
       </Routes>
     </Router>
   );

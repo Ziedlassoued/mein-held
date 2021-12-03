@@ -17,7 +17,7 @@ function LandingPage(): JSX.Element {
           <WelcomeSection />
         </section>
       </div>
-      <section className={styles.selectServices}>
+      <section id="services" className={styles.selectServices}>
         <SelectServices />
       </section>
       <div className={styles.out}>
