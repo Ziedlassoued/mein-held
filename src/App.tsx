@@ -1,7 +1,7 @@
 // import { useEffect, useState } from 'react';
 import React from 'react';
-import LandingPage from './pages/LandingPage/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage/LandingPage';
 import ElektrikerList from './pages/Services/ElektrikerList/ElektrikerList';
 import BodenlegerList from './pages/Services/BodenlegerList/BodenlegerList';
 import SignUpForm from './components/SignUp/SignUpForm/SignUpForm';

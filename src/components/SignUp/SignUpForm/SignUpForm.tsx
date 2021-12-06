@@ -26,7 +26,7 @@ const schema = yup.object().shape({
   confirmPassword: yup.string().oneOf([yup.ref('password'), null]),
 });
 
-function SignUpForm() {
+function SignUpForm(): JSX.Element {
   const {
     register,
     handleSubmit,
