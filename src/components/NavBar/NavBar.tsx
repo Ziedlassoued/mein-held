@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './NavBar.module.css';
 
 function NavBar(): JSX.Element {
@@ -16,11 +17,21 @@ function NavBar(): JSX.Element {
         className={isMobile ? styles.listMobile : styles.list}
         onClick={() => setIsMobile(false)}
       >
-        <li className={styles.items}>Home</li>
-        <li className={styles.items}>Services</li>
-        <li className={styles.items}>Blog</li>
-        <li className={styles.items}>Geschäftspartner</li>
-        <li className={styles.items}>Contact us</li>
+        <Link className={styles.items} to="/">
+          <li>Home</li>
+        </Link>
+        <a href="#services" className={styles.items}>
+          <li>Services</li>
+        </a>
+        <Link className={styles.items} to="/blog">
+          <li>Blog</li>
+        </Link>
+        <Link className={styles.items} to="/geschaeftspartner">
+          <li>Geschäftspartner</li>
+        </Link>
+        <Link className={styles.items} to="/contact-us">
+          <li>Contact us</li>
+        </Link>
       </ul>
       <button className={styles.btn} onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? (

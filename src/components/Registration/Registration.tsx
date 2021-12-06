@@ -25,6 +25,9 @@ function Registration(): JSX.Element {
         <Link to={'/registration'} className={styles.application}>
           Partner werden
         </Link>
+        <Link to="/loginpartner" className={styles.login}>
+          Login
+        </Link>
       </div>
     </section>
   );

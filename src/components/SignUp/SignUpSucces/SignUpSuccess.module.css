@@ -1,0 +1,21 @@
+.container {
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  background: var(--color-tertiary);
+}
+
+.message {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.successpicture {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

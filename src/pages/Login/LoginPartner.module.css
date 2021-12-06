@@ -1,0 +1,91 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, orange, #ededed);
+  font-family: var(--font-headline);
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.container .title {
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.2rem;
+  width: 3rem;
+  background: var(--color-tertiary);
+}
+
+.container form .partnerDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px;
+}
+
+form .btn input {
+  height: 2.5rem;
+  width: 200%;
+  outline: none;
+  color: var(--color-primary);
+  border: none;
+  background: linear-gradient(135deg, orange, #ededed);
+  font-family: var(--font-headline);
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.partnerDetails .inputBox input {
+  height: 2.5rem;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ededed;
+  padding-left: 1rem;
+  font-size: 1rem;
+  border-bottom-width: 2px;
+  transition: all 0.3 ease;
+}
+
+form .btn input:hover {
+  background: linear-gradient(-135deg, orange, #ededed);
+}
+
+form .partnerDetails .inputBox {
+  margin-bottom: 1rem;
+  width: calc(100% / 2 - 20px);
+}
+
+.partnerDetails .inputBox .details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.partnerDetails .inputBox input:focus,
+.partnerDetails .inputBox input:valid {
+  border-color: var(--color-tertiary);
+}
+
+form .btn {
+  height: 3rem;
+  margin: 45px 0;
+}

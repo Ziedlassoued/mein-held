@@ -13,8 +13,8 @@ p {
   display: grid;
   grid-template-areas:
     'p p d d'
-    '. m d d'
-    'a . d d';
+    'l m d d'
+    'a m d d';
   background: var(--color-primary);
   color: var(--color-secondary);
   padding: 30px;
@@ -35,6 +35,11 @@ p {
 
 .application {
   grid-area: a;
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 2.9rem;
   width: 75%;
   height: 3rem;
   border-radius: 5px;
@@ -44,8 +49,27 @@ p {
 }
 
 .application:hover {
-  background: var(--color-tertiary);
-  color: var(--color-secondary);
+  background: linear-gradient(135deg, orange, #ededed);
+  transition: all 0.5s ease-out;
+}
+
+.login {
+  grid-area: l;
+  text-decoration: none;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 2.9rem;
+  width: 75%;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: var(--font-headline);
+  cursor: pointer;
+}
+
+.login:hover {
+  background: linear-gradient(135deg, orange, #ededed);
   transition: all 0.5s ease-out;
 }
 
@@ -54,13 +78,17 @@ p {
     grid-template-areas:
       'p m m m'
       '. . . .'
-      'd d . .'
-      'a a . .';
+      'd d d d'
+      'a l l l';
     gap: 10px;
   }
 
   .DesktopView {
     grid-area: d;
     width: 300px;
+  }
+
+  .login {
+    width: 100%;
   }
 }
