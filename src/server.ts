@@ -1,6 +1,13 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import router from './lib/router';
 import path from 'path';
+import { connectDatabase } from './utils/database';
+
+if (!process.env.MONGODB_URI) {
+  throw new Error('No MongoDB URI dotenv variable');
+}
 
 const { PORT = 3001 } = process.env;
 
@@ -23,6 +30,8 @@ app.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, 'app/index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server listening at http://localhost:${PORT}`);
-});
+connectDatabase(process.env.MONGODB_URI).then(() =>
+  app.listen(PORT, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`);
+  })
+);
