@@ -5,6 +5,8 @@
 
 .container h2 {
   text-align: left;
+  padding: 1rem;
+  margin: 0;
 }
 
 .services {
@@ -19,10 +21,13 @@
 .services a {
   background-color: var(--color-tertiary);
   width: 8rem;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
-  text-align: left;
   color: var(--color-primary);
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 1rem;
 }
 
 .services a:hover {

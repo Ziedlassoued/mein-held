@@ -2,7 +2,6 @@
   display: grid;
   justify-content: space-evenly;
   grid-template-rows: auto;
-  row-gap: 2px;
   padding: 10px;
   margin: 2rem;
   cursor: pointer;

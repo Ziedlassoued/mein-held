@@ -19,7 +19,6 @@ function WelcomeSection(): JSX.Element {
             src="src/assets/Handwerker_welcome.jpeg"
             alt="welcome"
           />
-          <button className={styles.btnPartner}>Partner werden</button>
         </div>
       </div>
     </section>
