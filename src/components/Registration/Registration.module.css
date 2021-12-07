@@ -18,6 +18,7 @@ p {
   background: var(--color-primary);
   color: var(--color-secondary);
   padding: 30px;
+  height: 90vh;
 }
 
 .publicity {

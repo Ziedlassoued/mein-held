@@ -3,7 +3,7 @@ dotenv.config();
 import express from 'express';
 import router from './lib/router';
 import path from 'path';
-import { connectDatabase } from './utils/database';
+import { connectDatabase } from '../server/utils/database';
 
 if (!process.env.MONGODB_URI) {
   throw new Error('No MongoDB URI dotenv variable');
