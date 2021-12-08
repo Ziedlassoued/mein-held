@@ -7,6 +7,7 @@ function SmarthomeList(): JSX.Element {
   return (
     <div className={styles.container}>
       <NavBar />
+      <table></table>
       <Footer />
     </div>
   );
