@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
-import { UserProps } from '../../components/User/User';
+import User, { UserProps } from '../../components/User/User';
 
 function Blog(): JSX.Element {
   const [articles, setArticles] = useState<UserProps[]>([]);
   useEffect(() => {
     async function getArticles() {
-      const response = await fetch('api/users');
+      const response = await fetch('/users');
       const body = await response.json();
       setArticles(body);
     }
@@ -18,7 +18,22 @@ function Blog(): JSX.Element {
     <div>
       <NavBar />
       <div>
-        {articles
+        {!articles && <span>Loading...</span>}
+        {articles?.length === 0 && <span>No articles</span>}
+        {articles?.map((article) => (
+          <User
+            key={article.email}
+            companyName={article.companyName}
+            email={article.email}
+            city={article.city}
+            owner={article.owner}
+            street={article.street}
+            houseNr={article.houseNr}
+            zip={article.zip}
+            phonNumber={article.phonNumber}
+            category={article.category}
+          />
+          /* {articles
           ? articles.map((anObjectMapped) => {
               return (
                 <p key={`${anObjectMapped.email}`}>
@@ -26,7 +41,8 @@ function Blog(): JSX.Element {
                 </p>
               );
             })
-          : []}
+          : []} */
+        ))}
       </div>
       <Footer />
     </div>
