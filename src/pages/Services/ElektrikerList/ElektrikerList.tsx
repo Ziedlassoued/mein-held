@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
+import { UserProps } from '../../../components/User/User';
 import styles from './ElektrikerList.module.css';
 
-type UserProps = {
-  companyName: string;
-  owner: string;
-  email: string;
-  street: string;
-  houseNr: number;
-  zip: number;
-  city: string;
-  phonNumber: number;
-  category: string;
-};
+// type UserProps = {
+//   companyName: string;
+//   owner: string;
+//   email: string;
+//   street: string;
+//   houseNr: number;
+//   zip: number;
+//   city: string;
+//   phonNumber: number;
+//   category: string;
+// };
 
 function ElektrikerList(): JSX.Element {
   const [users, setUsers] = useState<UserProps[] | null>(null);

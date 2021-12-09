@@ -7,7 +7,7 @@ import Footer from '../../Footer/Footer';
 import NavBar from '../../NavBar/NavBar';
 import styles from './SignUpForm.module.css';
 
-interface FormInputProps {
+export interface FormInputProps {
   companyName: string;
   owner: string;
   file: File;
@@ -73,7 +73,7 @@ export default function SignUpForm() {
             <div className={styles.companyDetails}>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Firmen Name</label>
-                <input {...register('companyName')} />
+                <input placeholder="Firmen Name" {...register('companyName')} />
                 <p>{errors.companyName?.message}</p>
               </div>
               <div className={styles.inputBox}>
@@ -97,36 +97,39 @@ export default function SignUpForm() {
               </div>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Inhaber</label>
-                <input {...register('owner')} />
+                <input
+                  placeholder="Vor- und Nachname vom Inhaber"
+                  {...register('owner')}
+                />
                 <p>{errors.owner?.message}</p>
               </div>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Email</label>
-                <input {...register('email')} />
+                <input placeholder="Email" {...register('email')} />
                 <p> {errors.email?.message} </p>
               </div>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Telefon Nr.</label>
-                <input {...register('phonNumber')} />
+                <input placeholder="Telefon Nr." {...register('phonNumber')} />
               </div>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Straße</label>
-                <input {...register('street')} />
+                <input placeholder="Straße" {...register('street')} />
                 <p> {errors.street?.message} </p>
               </div>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Haus Nr.</label>
-                <input {...register('houseNumber')} />
+                <input placeholder="Haus Nr." {...register('houseNumber')} />
                 <p> {errors.houseNumber?.message} </p>
               </div>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Postleitzahl</label>
-                <input {...register('zip')} />
+                <input placeholder="Postleitzahl" {...register('zip')} />
                 <p> {errors.zip?.message} </p>
               </div>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Stadt</label>
-                <input {...register('city')} />
+                <input placeholder="Stadt" {...register('city')} />
                 <p> {errors.city?.message} </p>
               </div>
               <div className={styles.inputBox}>

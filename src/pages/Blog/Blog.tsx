@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
+import { UserProps } from '../../components/User/User';
 
-function Blog() {
+function Blog(): JSX.Element {
+  const [articles, setArticles] = useState<UserProps[]>([]);
+  useEffect(() => {
+    async function getArticles() {
+      const response = await fetch('api/users');
+      const body = await response.json();
+      setArticles(body);
+    }
+    getArticles();
+  }, []);
+
   return (
     <div>
       <NavBar />
+      <div>
+        {articles
+          ? articles.map((anObjectMapped) => {
+              return (
+                <p key={`${anObjectMapped.email}`}>
+                  {anObjectMapped.companyName} - {anObjectMapped.email}
+                </p>
+              );
+            })
+          : []}
+      </div>
       <Footer />
     </div>
   );
