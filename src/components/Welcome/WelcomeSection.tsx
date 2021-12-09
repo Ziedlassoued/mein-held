@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './WelcomeSection.module.css';
+import HandwerkerGesuchtSrc from '../../assets/Handwerker_gesucht.jpeg';
+import HandwerkerWelcomeSrc from '../../assets/Handwerker_welcome.jpeg';
 
 function WelcomeSection(): JSX.Element {
   return (
@@ -10,13 +12,13 @@ function WelcomeSection(): JSX.Element {
       <div className={styles.container}>
         <img
           className={styles.images}
-          src="src/assets/Handwerker_gesucht.jpeg"
+          src={HandwerkerGesuchtSrc}
           alt="handwerker gesucht"
         />
         <div>
           <img
             className={styles.images}
-            src="src/assets/Handwerker_welcome.jpeg"
+            src={HandwerkerWelcomeSrc}
             alt="welcome"
           />
         </div>

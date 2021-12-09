@@ -1,21 +1,37 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
+import router from './utils/router';
 import path from 'path';
+import { connectDatabase } from './utils/database';
 
-const port = process.env.PORT || 3001;
+if (!process.env.MONGODB_URI) {
+  throw new Error('No MongoDB URI dotenv variable');
+}
+
+const { PORT = 3001 } = process.env;
+
 const app = express();
 
-app.get('/api/hello', (_request, response) => {
-  response.json({ message: 'hello world!' });
-});
+// Middleware that parses json and looks at requests where the Content-Type header matches the type option.
+app.use(express.json());
 
-// Serve production bundle
-app.use(express.static('dist'));
+// Serve API requests from the router
+app.use('/api', router);
+
+// Serve storybook production bundle
+app.use('/storybook', express.static('dist/storybook'));
+
+// Serve app production bundle
+app.use(express.static('dist/app'));
 
 // Handle client routing, return all requests to the app
-app.get('*', (_request, response) => {
-  response.sendFile(path.join(__dirname, '../dist/index.html'));
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(__dirname, 'app/index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
+connectDatabase(process.env.MONGODB_URI).then(() =>
+  app.listen(PORT, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`);
+  })
+);

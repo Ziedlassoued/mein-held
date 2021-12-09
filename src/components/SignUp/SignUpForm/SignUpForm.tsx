@@ -41,20 +41,20 @@ export default function SignUpForm() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.companyDetails}>
               <div className={styles.inputBox}>
-                <label>Firmen Name</label>
+                <label className={styles.details}>Firmen Name</label>
                 <input {...register('companyName')} />
               </div>
               <div className={styles.inputBox}>
-                <label>Kategorie auswählen</label>
-                <select {...register('category')}>
+                <label className={styles.details}>Kategorie auswählen</label>
+                <select className={styles.selectBox} {...register('category')}>
                   <option value="Kategorie">Kategorie</option>
+                  <option value="Küchenbau">Kategorie</option>
                   <option value="Elektriker">Elektriker</option>
                   <option value="Schreiner">Schreiner</option>
                   <option value="Dachdecker">Dachdecker</option>
                   <option value="Smarthome">Smarthome</option>
                   <option value="Maler">Maler</option>
                   <option value="Klempner">Klempner</option>
-                  <option value="Küchenbau">Kategorie</option>
                   <option value="Sanitär">Sanitär</option>
                   <option value="Gärtner">Gärtner</option>
                   <option value="Fliesenleger">Fliesenleger</option>
@@ -63,31 +63,31 @@ export default function SignUpForm() {
                 </select>
               </div>
               <div className={styles.inputBox}>
-                <label>Inhaber</label>
+                <label className={styles.details}>Inhaber</label>
                 <input {...register('owner')} />
               </div>
               <div className={styles.inputBox}>
-                <label>Email</label>
+                <label className={styles.details}>Email</label>
                 <input {...register('email')} />
               </div>
               <div className={styles.inputBox}>
-                <label>Telefon Nr.</label>
+                <label className={styles.details}>Telefon Nr.</label>
                 <input {...register('phonNumber')} />
               </div>
               <div className={styles.inputBox}>
-                <label>Straße</label>
+                <label className={styles.details}>Straße</label>
                 <input {...register('street')} />
               </div>
               <div className={styles.inputBox}>
-                <label>Haus Nr.</label>
+                <label className={styles.details}>Haus Nr.</label>
                 <input {...register('houseNr')} />
               </div>
               <div className={styles.inputBox}>
-                <label>Postleitzahl</label>
+                <label className={styles.details}>Postleitzahl</label>
                 <input {...register('zip')} />
               </div>
               <div className={styles.inputBox}>
-                <label>Stadt</label>
+                <label className={styles.details}>Stadt</label>
                 <input {...register('city')} />
               </div>
               <div className={styles.btn}>

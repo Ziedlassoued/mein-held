@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
 import styles from './ElektrikerList.module.css';
+
 type UserProps = {
   companyName: string;
   owner: string;
@@ -17,7 +18,7 @@ type UserProps = {
 function ElektrikerList(): JSX.Element {
   const [users, setUsers] = useState<UserProps[] | null>(null);
   function useGetUsers(): UserProps[] | null {
-    const category = 'Smarthome';
+    const category = 'Elektriker';
     useEffect(() => {
       fetch('/api/users/' + category)
         .then((response) => response.json())
@@ -28,9 +29,9 @@ function ElektrikerList(): JSX.Element {
   }
   useGetUsers;
   return (
-    <>
+    <div>
+      <NavBar />
       <div className={styles.container}>
-        <NavBar />
         {users
           ? users.map((anObjectMapped) => {
               return (
@@ -40,9 +41,9 @@ function ElektrikerList(): JSX.Element {
               );
             })
           : []}
-        <Footer />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 export default ElektrikerList;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ScrollToTop.module.css';
+import ScrollUpSrc from '../../../assets/ScrollUp.png';
 
 function Scroll(): JSX.Element {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +35,7 @@ function Scroll(): JSX.Element {
         ) : (
           <img
             className={styles.iconScrollUp}
-            src="src/assets/ScrollUp.png"
+            src={ScrollUpSrc}
             alt="Scroll to top"
           />
         )}

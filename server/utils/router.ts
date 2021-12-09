@@ -1,15 +1,15 @@
 import express from 'express';
-import { getUserCollection } from '../../server/utils/database';
+import { getUserCollection } from './database';
 
 const router = express.Router();
 
-router.get('/api/users/:category', async (request, response) => {
+router.get('/users/:category', async (request, response) => {
   const category = request.params.category;
   const existingUser = await getUserCollection().find({ category: category });
   if (existingUser) {
     response.status(200).send(existingUser);
   } else {
-    response.status(404).send('Zur Zeit gibt es keine Einträge');
+    response.status(404).send('Zur Zeit gibt es keine Einträge!');
   }
 });
 
@@ -19,10 +19,10 @@ router.post('/users', async (request, response) => {
     typeof newUser.companyName !== 'string' ||
     typeof newUser.owner !== 'string' ||
     typeof newUser.email !== 'string' ||
-    typeof newUser.phonNumber !== 'number' ||
+    typeof newUser.phonNumber !== 'string' ||
     typeof newUser.category !== 'string'
   ) {
-    response.status(400).send('Fehlende propreties');
+    response.status(400).send('Bitte Pflichtfelder ausfüllen!');
     return;
   }
   const userCollection = getUserCollection();
@@ -33,7 +33,7 @@ router.post('/users', async (request, response) => {
   if (!existingUser) {
     const insertedUser = await userCollection.insertOne(newUser);
     response.send(
-      `${newUser.email} wurde hinzugefügt, mit ID: ${insertedUser.insertedId}`
+      `${newUser.email} wurde hinzugefügt. Ihre ID lautet: ${insertedUser.insertedId}`
     );
   } else {
     response.status(409).send('bereit registriert');
