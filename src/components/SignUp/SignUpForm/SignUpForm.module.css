@@ -24,7 +24,7 @@
 
 .container .title::before {
   content: '';
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   height: 0.2rem;
@@ -89,6 +89,10 @@ form .companyDetails .inputBox {
 .companyDetails .inputBox input:focus,
 .companyDetails .inputBox input:valid {
   border-color: var(--color-tertiary);
+}
+
+.inputLogo {
+  height: 3rem;
 }
 
 form .btn {
