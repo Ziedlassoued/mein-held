@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Kuechenbau.module.css';
-import KuechnebauSrc from '../../../assets/servicesIcon/Kuechenbau.png';
+import KuechnebauSrc from '../../../assets/servicesIcon/kuechenbau.png';
 
 function Kuechenbau(): JSX.Element {
   return (

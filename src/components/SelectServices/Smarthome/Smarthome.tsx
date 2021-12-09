@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Smarthome.module.css';
-import SmarthomeSrc from '../../../assets/servicesIcon/Smarthome.png';
+import SmarthomeSrc from '../../../assets/servicesIcon/smarthome.png';
 
 function Smarthome(): JSX.Element {
   return (

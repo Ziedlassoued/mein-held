@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Sanitaer.module.css';
-import SanitaerSrc from '../../../assets/servicesIcon/Sanitaer.png';
+import SanitaerSrc from '../../../assets/servicesIcon/sanitaer.png';
 
 function Sanitaer(): JSX.Element {
   return (

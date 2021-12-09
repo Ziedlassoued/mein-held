@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Klempner.module.css';
-import KlempnerSrc from '../../../assets/servicesIcon/Klempner.png';
+import KlempnerSrc from '../../../assets/servicesIcon/klempner.png';
 
 function Klempner(): JSX.Element {
   return (

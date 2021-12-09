@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Fliesenleger.module.css';
-import FliesenlegerSrc from '../../../assets/servicesIcon/Fliesenleger.png';
+import FliesenlegerSrc from '../../../assets/servicesIcon/fliesenleger.png';
 
 function Fliesenleger(): JSX.Element {
   return (

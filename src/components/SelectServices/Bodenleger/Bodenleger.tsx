@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Bodenleger.module.css';
-import BodenlegerSrc from '../../../assets/servicesIcon/Bodenleger.png';
+import BodenlegerSrc from '../../../assets/servicesIcon/bodenleger.png';
 
 function Bodenleger(): JSX.Element {
   return (

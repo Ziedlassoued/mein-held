@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Schreiner.module.css';
-import SchreinerSrc from '../../../assets/servicesIcon/Schreiner.png';
+import SchreinerSrc from '../../../assets/servicesIcon/schreiner.png';
 
 function Schreiner(): JSX.Element {
   return (

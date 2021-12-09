@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Maurer.module.css';
-import MaurerSrc from '../../../assets/servicesIcon/Maurer.png';
+import MaurerSrc from '../../../assets/servicesIcon/maurer.png';
 
 function Maurer(): JSX.Element {
   return (

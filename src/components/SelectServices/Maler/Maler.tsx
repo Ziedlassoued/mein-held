@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Maler.module.css';
-import MalerSrc from '../../../assets/servicesIcon/Maler.png';
+import MalerSrc from '../../../assets/servicesIcon/maler.png';
 
 function Maler(): JSX.Element {
   return (

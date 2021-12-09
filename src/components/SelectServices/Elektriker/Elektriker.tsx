@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Elektriker.module.css';
 import { Link } from 'react-router-dom';
-import ElektrikerSrc from '../../../assets/servicesIcon/Elektriker.png';
+import ElektrikerSrc from '../../../assets/servicesIcon/elektriker.png';
 
 function Elektriker(): JSX.Element {
   return (

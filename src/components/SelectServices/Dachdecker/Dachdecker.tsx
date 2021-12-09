@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Dachdecker.module.css';
-import DachdeckerSrc from '../../../assets/servicesIcon/Dachdecker.png';
+import DachdeckerSrc from '../../../assets/servicesIcon/dachdecker.png';
 
 function Dachdecker(): JSX.Element {
   return (
