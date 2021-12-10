@@ -1,33 +1,11 @@
 .container {
-  width: 10.3rem;
+  width: 100%;
 }
 
 .wrapper {
   display: grid;
-  background-color: var(--color-neutral-grade);
+  background-color: var(--color-secondary);
   gap: 0.3rem;
   padding: 1.4rem 1.2rem;
   border-radius: 1.25rem;
-}
-
-.genres {
-  opacity: 0.5;
-}
-
-.location,
-.date,
-.genres {
-  text-transform: capitalize;
-}
-
-.location-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.date-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
 }

@@ -1,49 +1,47 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
-import { UserProps } from '../../../components/User/User';
-import styles from './ElektrikerList.module.css';
 
-// type UserProps = {
-//   companyName: string;
-//   owner: string;
-//   email: string;
-//   street: string;
-//   houseNr: number;
-//   zip: number;
-//   city: string;
-//   phonNumber: number;
-//   category: string;
-// };
+import styles from './ElektrikerList.module.css';
+interface PostProps {
+  id: number;
+  title: string;
+  body: string;
+}
 
 function ElektrikerList(): JSX.Element {
-  const [users, setUsers] = useState<UserProps[] | null>(null);
-  function useGetUsers(): UserProps[] | null {
-    const category = 'Elektriker';
-    useEffect(() => {
-      fetch('/api/users/' + category)
-        .then((response) => response.json())
-        .then(setUsers);
-    }, []);
+  const [posts, setPosts] = useState<PostProps[]>([]);
+  useEffect(() => {
+    axios
+      .get('http://jsonplaceholder.typicode.com/posts')
+      .then((response) => {
+        console.log(response);
+        setPosts(response.data);
+      })
+      .catch(() => {
+        console.error();
+      });
+  }, []);
 
-    return users;
-  }
-  useGetUsers;
   return (
-    <div>
+    <div className={styles.main}>
       <NavBar />
       <div className={styles.container}>
-        {users
-          ? users.map((anObjectMapped) => {
-              return (
-                <p key={`${anObjectMapped.email}`}>
-                  {anObjectMapped.companyName} - {anObjectMapped.email}
-                </p>
-              );
-            })
-          : []}
+        {posts?.length === 0 && (
+          <span>keine Diensleister im Moment vorhanden</span>
+        )}
+        <div>
+          <ul>
+            {posts.map((user) => (
+              <li key={user.id}>
+                {user.title} <p>{user.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }
