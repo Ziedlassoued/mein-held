@@ -6,7 +6,7 @@ import styles from './BodenlegerList.module.css';
 function BodenlegerList(): JSX.Element {
   const [message, setMessage] = useState('');
   useEffect(() => {
-    fetch('/api/hello')
+    fetch('/api/users')
       .then((response) => response.json())
       .then((result) => setMessage(result.message));
   }, []);

@@ -1,29 +1,71 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
-import router from './utils/router';
 import path from 'path';
-import { connectDatabase } from './utils/database';
+import { connectDatabase, getUserCollection } from './utils/database';
+
+const { PORT = 3001 } = process.env;
+const app = express();
 
 if (!process.env.MONGODB_URI) {
   throw new Error('No MongoDB URI dotenv variable');
 }
 
-const { PORT = 3001 } = process.env;
+app.get('/api/hello', (_request, response) => {
+  response.json({ message: 'Hello from server' });
+});
 
-const app = express();
+// Serve app production bundle
+app.use(express.static('dist/app'));
 
 // Middleware that parses json and looks at requests where the Content-Type header matches the type option.
 app.use(express.json());
 
-// Serve API requests from the router
-app.use('/api', router);
+// Get all Users from MongoDB
+app.get('/api/users', async (_request, response) => {
+  const userDocuments = await getUserCollection().find().toArray();
+  response.status(200).send(userDocuments);
+});
 
-// Serve storybook production bundle
-app.use('/storybook', express.static('dist/storybook'));
+// Get Users by category from Mongodb
+app.get('/api/users/:category', async (request, response) => {
+  const category = request.params.category;
+  const existingUser = await getUserCollection().find({
+    category: category,
+  });
+  if (existingUser) {
+    response.status(200).send(existingUser);
+  } else {
+    response.status(404).send('Zur Zeit gibt es keine Einträge!');
+  }
+});
 
-// Serve app production bundle
-app.use(express.static('dist/app'));
+//Post new User to MongoDB
+app.post('/users', async (request, response) => {
+  const newUser = request.body;
+  if (
+    typeof newUser.companyName !== 'string' ||
+    typeof newUser.owner !== 'string' ||
+    typeof newUser.email !== 'string' ||
+    typeof newUser.phonNumber !== 'string'
+  ) {
+    response.status(400).send('Bitte Pflichtfelder ausfüllen!');
+    return;
+  }
+  const userCollection = getUserCollection();
+  const existingUser = await userCollection.findOne({
+    email: newUser.email,
+  });
+
+  if (!existingUser) {
+    const insertedUser = await userCollection.insertOne(newUser);
+    response.send(
+      `${newUser.email} wurde hinzugefügt. Ihre ID lautet: ${insertedUser.insertedId}`
+    );
+  } else {
+    response.status(409).send('bereit registriert');
+  }
+});
 
 // Handle client routing, return all requests to the app
 app.get('*', (_req, res) => {

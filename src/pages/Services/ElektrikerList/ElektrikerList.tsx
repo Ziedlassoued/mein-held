@@ -2,22 +2,19 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
+import { FormInputProps } from '../../../components/SignUp/SignUpForm/SignUpForm';
 
 import styles from './ElektrikerList.module.css';
-interface PostProps {
-  id: number;
-  title: string;
-  body: string;
-}
 
 function ElektrikerList(): JSX.Element {
-  const [posts, setPosts] = useState<PostProps[]>([]);
+  const [users, setUsers] = useState<FormInputProps[]>([]);
+
   useEffect(() => {
     axios
-      .get('http://jsonplaceholder.typicode.com/posts')
+      .get('/api/users/')
       .then((response) => {
         console.log(response);
-        setPosts(response.data);
+        setUsers(response.data);
       })
       .catch(() => {
         console.error();
@@ -28,15 +25,18 @@ function ElektrikerList(): JSX.Element {
     <div className={styles.main}>
       <NavBar />
       <div className={styles.container}>
-        {posts?.length === 0 && (
+        {users?.length === 0 && (
           <span>keine Diensleister im Moment vorhanden</span>
         )}
         <div>
           <ul>
-            {posts.map((user) => (
-              <li key={user.id}>
-                {user.title} <p>{user.body}</p>
-              </li>
+            {users.map((user) => (
+              <div key={user.email}>
+                <div className={styles.row}>
+                  <h2>{user.companyName} </h2>
+                  <p>{user.city}</p>
+                </div>
+              </div>
             ))}
           </ul>
         </div>
