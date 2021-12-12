@@ -2,12 +2,6 @@ import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import styles from './Contact.module.css';
-import FacebookSrc from '../../assets/socialMedia/facebook.png';
-import InstagramSrc from '../../assets/socialMediainstagram.png';
-import YoutubeSrc from '../../assets/socialMedia/youtube.png';
-import PinterestSrc from '../../assets/socialMedia/pinterest.png';
-import TwitterSrc from '../../assets/socialMedia/twitter.png';
-import EmailSrc from '../../assets/socialMedia/email.png';
 
 function Contact() {
   return (
@@ -112,18 +106,6 @@ function Contact() {
               ></iframe>
             </div>
           </div>
-        </div>
-      </div>
-      <div className={styles.content}>
-        <div className={styles.img}>
-          <div className={styles.socialIcon}>
-            <img src={FacebookSrc} alt="facebook" />
-            <img src={InstagramSrc} alt="instagram" />
-            <img src={YoutubeSrc} alt="youtube" />
-            <img src={PinterestSrc} alt="pinterest" />
-            <img src={TwitterSrc} alt="twitter" />
-          </div>
-          <img className={styles.email} src={EmailSrc} alt="email" />
         </div>
       </div>
       <Footer />
