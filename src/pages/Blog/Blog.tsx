@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import styles from './Blog.module.css';
 import { FormInputProps } from '../../components/SignUp/SignUpForm/SignUpForm';
+import NavBarBlog from '../../components/NavBar/NavBarBlog/NavBarBlog';
 
 function Blog(): JSX.Element {
   const [users, setUsers] = useState<FormInputProps[]>([]);
@@ -15,7 +15,7 @@ function Blog(): JSX.Element {
 
   return (
     <div className={styles.container}>
-      <NavBar />
+      <NavBarBlog />
       <div>
         <h1>Blog</h1>
 

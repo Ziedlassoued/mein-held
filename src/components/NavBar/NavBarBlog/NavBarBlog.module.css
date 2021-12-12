@@ -1,0 +1,118 @@
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6rem;
+  background-color: var(--color-secondary);
+}
+
+.imageLogo {
+  width: 70px;
+}
+
+.logo {
+  font-family: var(--font-headline);
+  color: var(--color-primary);
+  font-size: 30px;
+}
+
+.list {
+  font-family: var(--font-headline);
+  display: flex;
+  text-decoration: none;
+  justify-content: flex-end;
+  list-style: none;
+  width: 75%;
+  background: var(--color-secondary);
+}
+
+.items {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--color-primary);
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.items:hover {
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 5px;
+  transition: all 0.5s ease-out;
+}
+
+.btn {
+  display: none;
+}
+
+@media screen and (max-width: 1130px) {
+  .navBar {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1.5rem;
+  }
+
+  .logo {
+    display: flex;
+    position: relative;
+  }
+
+  .imageLogo {
+    width: 70px;
+    margin-left: 0.5rem;
+  }
+
+  .list {
+    display: none;
+  }
+
+  .listMobile {
+    font-family: var(--font-headline);
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: var(--color-secondary);
+    top: 6.1rem;
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s ease-out;
+    width: 100%;
+  }
+
+  .items {
+    display: grid;
+    color: var(--color-primary);
+    margin: auto;
+    padding: 1.5rem 1rem 0;
+    width: 100%;
+    transition: all 0.5s ease;
+    border-bottom: 1px solid var(--color-primary);
+  }
+
+  .btn {
+    display: block;
+    position: absolute;
+    font-size: 2rem;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    outline: none;
+    top: 7px;
+    right: 25px;
+    border: none;
+  }
+
+  .iconMobile {
+    width: 40px;
+    height: 50px;
+    padding-top: 0.3rem;
+  }
+
+  .iconClose {
+    width: 40px;
+    height: 50px;
+    padding-top: 0.8rem;
+  }
+}
