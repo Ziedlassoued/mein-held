@@ -52,7 +52,7 @@ export default function SignUpForm() {
   });
   const onSubmit: SubmitHandler<FormInputProps> = (data) => {
     console.log(data);
-    fetch('/api/users', {
+    fetch('/api/users/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

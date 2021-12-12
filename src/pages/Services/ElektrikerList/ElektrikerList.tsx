@@ -32,10 +32,12 @@ function ElektrikerList(): JSX.Element {
           <ul>
             {users.map((user) => (
               <div key={user.email}>
-                <div className={styles.row}>
-                  <h2>{user.companyName} </h2>
-                  <p>{user.city}</p>
-                </div>
+                {user.category === 'Elektriker' && (
+                  <div className={styles.row}>
+                    <h2>{user.companyName} </h2>
+                    <p>{user.city}</p>
+                  </div>
+                )}
               </div>
             ))}
           </ul>

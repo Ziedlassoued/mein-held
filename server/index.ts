@@ -41,7 +41,7 @@ app.get('/api/users/:category', async (request, response) => {
 });
 
 //Post new User to MongoDB
-app.post('/users', async (request, response) => {
+app.post('/api/users', async (request, response) => {
   const newUser = request.body;
   if (
     typeof newUser.companyName !== 'string' ||
