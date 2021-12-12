@@ -1,29 +1,26 @@
 import React from 'react';
 import styles from './WelcomeSection.module.css';
 import HandwerkerGesuchtSrc from '../../assets/Handwerker_gesucht.jpeg';
-import HandwerkerWelcomeSrc from '../../assets/Handwerker_welcome.jpeg';
 
 function WelcomeSection(): JSX.Element {
   return (
-    <section className={styles.welcome}>
-      <button className={styles.btnWelcome}>
-        Jetzt die besten Handwerker finden
-      </button>
+    <div className={styles.main}>
       <div className={styles.container}>
-        <img
-          className={styles.images}
-          src={HandwerkerGesuchtSrc}
-          alt="handwerker gesucht"
-        />
-        <div>
-          <img
-            className={styles.images}
-            src={HandwerkerWelcomeSrc}
-            alt="welcome"
-          />
-        </div>
+        <section className={styles.home} id="home">
+          <div className={styles.image}>
+            <img src={HandwerkerGesuchtSrc} alt="Handwerker gesucht" />
+          </div>
+          <div className={styles.content}>
+            <span>Jetzt die besten Handwerker finden</span>
+            <a href="#" className={styles.btn}>
+              los geht´s
+            </a>
+            <h3>alles was sie brauchen</h3>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 }
+
 export default WelcomeSection;
