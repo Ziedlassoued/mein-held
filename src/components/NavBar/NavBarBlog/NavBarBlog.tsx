@@ -19,10 +19,10 @@ function NavBarBlog(): JSX.Element {
         <Link className={styles.items} to="/">
           <li>Home</li>
         </Link>
-        <a href="#" className={styles.items}>
+        <a href="#diy" className={styles.items}>
           <li>DIY Ideen mit Anleitung</li>
         </a>
-        <a href="#" className={styles.items}>
+        <a href="#styling" className={styles.items}>
           <li>Stillwelten & Gestaltungstipps</li>
         </a>
       </ul>

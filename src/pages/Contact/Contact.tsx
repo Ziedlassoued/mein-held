@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import styles from './Contact.module.css';
+import Second from './Second/Second';
 
 function Contact() {
   return (
@@ -108,6 +109,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Second />
       <Footer />
     </div>
   );
