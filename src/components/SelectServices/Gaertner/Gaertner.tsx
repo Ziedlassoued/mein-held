@@ -5,9 +5,16 @@ import GaertnerSrc from '../../../assets/servicesIcon/gaertner.png';
 
 function Gaertner(): JSX.Element {
   return (
-    <div className={styles.items}>
-      <img src={GaertnerSrc} alt="Gaertner" />
-      <Link to={'/GaertnerList'}>Gärtner</Link>
+    <div className={styles.category}>
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
+          <h3>Gärtner</h3>
+          <img src={GaertnerSrc} alt="Gaertner" />
+          <Link to={'/GaertnerList'} className={styles.btn}>
+            suchen
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

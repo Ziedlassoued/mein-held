@@ -5,9 +5,16 @@ import FliesenlegerSrc from '../../../assets/servicesIcon/fliesenleger.png';
 
 function Fliesenleger(): JSX.Element {
   return (
-    <div className={styles.items}>
-      <img src={FliesenlegerSrc} alt="Fliesenleger" />
-      <Link to={'/FliesenlegerList'}>Fliesenleger</Link>
+    <div className={styles.category}>
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
+          <h3>Fliesenleger</h3>
+          <img src={FliesenlegerSrc} alt="Fliesenleger" />
+          <Link to={'/FliesenlegerList'} className={styles.btn}>
+            suchen
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

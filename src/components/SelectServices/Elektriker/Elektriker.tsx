@@ -5,9 +5,16 @@ import ElektrikerSrc from '../../../assets/servicesIcon/elektriker.png';
 
 function Elektriker(): JSX.Element {
   return (
-    <div className={styles.items}>
-      <img src={ElektrikerSrc} alt="elektriker" />
-      <Link to={'/ElektrikerList'}>elektriker</Link>
+    <div className={styles.category}>
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
+          <h3>Elektriker</h3>
+          <img src={ElektrikerSrc} alt="elektriker" />
+          <Link to={'/ElektrikerList'} className={styles.btn}>
+            suchen
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

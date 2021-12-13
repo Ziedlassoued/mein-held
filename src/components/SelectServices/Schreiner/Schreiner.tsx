@@ -5,9 +5,16 @@ import SchreinerSrc from '../../../assets/servicesIcon/schreiner.png';
 
 function Schreiner(): JSX.Element {
   return (
-    <div className={styles.items}>
-      <img src={SchreinerSrc} alt="Schreiner" />
-      <Link to={'/SchreinerList'}>Schreiner</Link>
+    <div className={styles.category}>
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
+          <h3>Schreiner</h3>
+          <img src={SchreinerSrc} alt="Schreiner" />
+          <Link to={'/SchreinerList'} className={styles.btn}>
+            suchen
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

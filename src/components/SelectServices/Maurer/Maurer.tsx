@@ -5,9 +5,16 @@ import MaurerSrc from '../../../assets/servicesIcon/maurer.png';
 
 function Maurer(): JSX.Element {
   return (
-    <div className={styles.items}>
-      <img src={MaurerSrc} alt="Maurer" />
-      <Link to={'/MaurerList'}>Maurer</Link>
+    <div className={styles.category}>
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
+          <h3>Maurer</h3>
+          <img src={MaurerSrc} alt="Maurer" />
+          <Link to={'/MaurerList'} className={styles.btn}>
+            suchen
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

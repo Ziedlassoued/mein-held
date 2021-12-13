@@ -5,9 +5,16 @@ import SanitaerSrc from '../../../assets/servicesIcon/sanitaer.png';
 
 function Sanitaer(): JSX.Element {
   return (
-    <div className={styles.items}>
-      <img src={SanitaerSrc} alt="Sanitaer" />
-      <Link to={'/SanitaerList'}>Sanitär</Link>
+    <div className={styles.category}>
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
+          <h3>Sanitär</h3>
+          <img src={SanitaerSrc} alt="Sanitaer" />
+          <Link to={'/SanitaerList'} className={styles.btn}>
+            suchen
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

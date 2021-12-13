@@ -5,9 +5,16 @@ import DachdeckerSrc from '../../../assets/servicesIcon/dachdecker.png';
 
 function Dachdecker(): JSX.Element {
   return (
-    <div className={styles.items}>
-      <img src={DachdeckerSrc} alt="Dachdecker" />
-      <Link to={'/DachdeckerList'}>Dachdecker</Link>
+    <div className={styles.category}>
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
+          <h3>Dachdecker</h3>
+          <img src={DachdeckerSrc} alt="Dachdecker" />
+          <Link to={'/DachdeckerList'} className={styles.btn}>
+            suchen
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

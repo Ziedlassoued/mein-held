@@ -1,73 +1,44 @@
-.container {
-  background: var(--color-secondary);
-  font-family: var(--font-headline);
-}
-
-.container h2 {
-  text-align: left;
+.heading {
+  text-align: center;
+  color: var(--color-primary);
+  text-transform: uppercase;
   padding: 1rem;
-  margin: 0;
+  font-size: 3.5rem;
 }
 
-.services {
-  background-color: white;
+.heading span {
+  color: var(--color-tertiary);
+  text-transform: uppercase;
+}
+
+.category .boxContainer {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 25% 25% 25% 25%;
-  row-gap: 1rem;
-  text-transform: capitalize;
+  grid-gap: 1rem;
+  padding-right: 100px;
 }
 
-.services a {
-  background-color: var(--color-tertiary);
-  width: 8rem;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--color-primary);
-  border-radius: 5px;
-  font-weight: bold;
-  margin: 1rem;
-}
-
-.services a:hover {
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
-  transition: all 0.5s ease;
-  transform: scale(1.1);
-}
-
-.items {
-  display: grid;
-  justify-content: space-evenly;
-  grid-template-rows: auto;
-  row-gap: 2px;
-  padding: 0.5rem;
-  margin: 2rem;
-  cursor: pointer;
-}
-
-.items:hover {
-  transition: all 0.5s ease;
-  transform: scale(1.1);
-}
-
-@media screen and (max-width: 850px) {
-  .services {
+@media (max-width: 1300px) {
+  .category .boxContainer {
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .services {
+@media (max-width: 950px) {
+  .category .boxContainer {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 20%;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 2rem;
   }
 
-  .services a {
-    height: 1.5rem;
+  .category .boxContainer {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

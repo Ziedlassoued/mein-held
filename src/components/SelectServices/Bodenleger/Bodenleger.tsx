@@ -5,9 +5,16 @@ import BodenlegerSrc from '../../../assets/servicesIcon/bodenleger.png';
 
 function Bodenleger(): JSX.Element {
   return (
-    <div className={styles.items}>
-      <img src={BodenlegerSrc} alt="Bodenleger" />
-      <Link to={'/BodenlegerList'}>Bodenleger</Link>
+    <div className={styles.category}>
+      <div className={styles.boxContainer}>
+        <div className={styles.box}>
+          <h3>Bodenleger</h3>
+          <img src={BodenlegerSrc} alt="Bodenleger" />
+          <Link to={'/BodenlegerList'} className={styles.btn}>
+            suchen
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

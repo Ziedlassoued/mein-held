@@ -3,7 +3,7 @@ import styles from './SelectServices.module.css';
 import Elektriker from './Elektriker/Elektriker';
 import Schreiner from './Schreiner/Schreiner';
 import Dachdecker from './Dachdecker/Dachdecker';
-import Smarthome from './Smarthome/Smarthome';
+import { Link } from 'react-router-dom';
 import Maler from './Maler/Maler';
 import Klempner from './Klempner/Klempner';
 import Kuechenbau from './Kuechenbau/Kuechenbau';
@@ -12,12 +12,16 @@ import Gaertner from './Gaertner/Gaertner';
 import Fliesenleger from './Fliesenleger/Fliesenleger';
 import Maurer from './Maurer/Maurer';
 import Bodenleger from './Bodenleger/Bodenleger';
+import SmarthomeSrc from '../../assets/servicesIcon/smarthome.png';
+import Smarthome from './Smarthome/Smarthome';
 
 function SelectServices() {
   return (
-    <section className={styles.container}>
-      <h2>Services</h2>
-      <div className={styles.services}>
+    <div className={styles.category}>
+      <h1 className={styles.heading}>
+        Services nach <span>kategorien</span>
+      </h1>
+      <div className={styles.boxContainer}>
         <div>
           <Elektriker />
         </div>
@@ -55,7 +59,7 @@ function SelectServices() {
           <Bodenleger />
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 export default SelectServices;
