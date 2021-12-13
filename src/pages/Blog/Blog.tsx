@@ -8,13 +8,12 @@ import YoutubeSrc from '../../assets/youtube.png';
 import PinterestSrc from '../../assets/pinterest.png';
 import TwitterSrc from '../../assets/twitter.png';
 import EmailSrc from '../../assets/email.png';
-import ElektrikerSrc from '../../assets/servicesIcon/elektriker.png';
 
 function Blog(): JSX.Element {
   return (
     <div className={styles.main}>
       <NavBarBlog />
-      {/* <section id="#socialMedia"></section>
+      <section id="#socialMedia"></section>
       <section id="diy"></section>
       <div className={styles.wrapper}>
         <div className={styles.content}>
@@ -29,42 +28,8 @@ function Blog(): JSX.Element {
             <img className={styles.email} src={EmailSrc} alt="email" />
           </div>
         </div>
-      </div> */}
-      <div className={styles.category}>
-        <h1 className={styles.heading}>
-          Services by <span>kategorie</span>
-        </h1>
-        <div className={styles.boxContainer}>
-          <div className={styles.box}>
-            <h3>Elektriker</h3>
-            <img src={ElektrikerSrc} alt="elektriker" />
-            <a href="#" className={styles.btn}>
-              suchen
-            </a>
-          </div>
-          <div className={styles.box}>
-            <h3>Maler</h3>
-            <img src={ElektrikerSrc} alt="elektriker" />
-            <a href="#" className={styles.btn}>
-              suchen
-            </a>
-          </div>
-          <div className={styles.box}>
-            <h3>Klempner</h3>
-            <img src={ElektrikerSrc} alt="elektriker" />
-            <a href="#" className={styles.btn}>
-              suchen
-            </a>
-          </div>
-          <div className={styles.box}>
-            <h3>Maurer</h3>
-            <img src={ElektrikerSrc} alt="elektriker" />
-            <a href="#" className={styles.btn}>
-              suchen
-            </a>
-          </div>
-        </div>
       </div>
+
       <Footer />
     </div>
   );
