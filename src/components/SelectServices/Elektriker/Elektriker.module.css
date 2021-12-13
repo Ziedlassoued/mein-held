@@ -31,12 +31,16 @@
   font-size: 1.2rem;
   color: var(--color-primary);
   border-radius: 5px;
-  background-color: var(--color-tertiary);
+  background: var(--color-tertiary);
   margin-bottom: 1rem;
   margin-right: 5rem;
   margin-left: 5rem;
   text-align: center;
   padding: 0.5rem;
+}
+
+.category .boxContainer .box .btn:hover {
+  transform: scale(1.2);
 }
 
 @media (max-width: 450px) {
