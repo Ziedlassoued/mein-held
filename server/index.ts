@@ -40,6 +40,42 @@ app.get('/api/users/:category', async (request, response) => {
   }
 });
 
+// Login user
+app.post('/api/login', async (request, response) => {
+  const { companyName, email, password } = request.body;
+
+  const userCollection = getUserCollection();
+
+  const existingUser = await userCollection.findOne({
+    companyName,
+    email,
+    password,
+  });
+  if (existingUser) {
+    response.setHeader('Set-Cookie', `username=${companyName}`);
+    response.send(existingUser);
+  } else {
+    response
+      .status(401)
+      .send('Login failed. Check if username and password is correct');
+  }
+});
+
+// Get logged User
+app.get('/api/me', async (request, response) => {
+  const username = request.cookies.username;
+  const usersCollection = getUserCollection();
+  const loggedUser = await usersCollection.findOne({
+    username: username,
+  });
+
+  if (loggedUser) {
+    response.send(loggedUser);
+  } else {
+    response.status(404).send('User not found');
+  }
+});
+
 //Post new User to MongoDB
 app.post('/api/users', async (request, response) => {
   const newUser = request.body;

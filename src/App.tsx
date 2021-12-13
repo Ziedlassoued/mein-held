@@ -18,6 +18,7 @@ import MaurerList from './pages/Services/MaurerList/MaurerList';
 import LoginPartner from './pages/Login/LoginPartner';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
+import PartnerLandingPage from './pages/PartnerLandingPage/PartnerLandingPage';
 
 function App() {
   // const [message, setMessage] = useState('');
@@ -48,6 +49,7 @@ function App() {
         <Route path="/loginpartner" element={<LoginPartner />}></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/contact-us" element={<Contact />}></Route>
+        <Route path="/me" element={<PartnerLandingPage />}></Route>
       </Routes>
     </Router>
   );

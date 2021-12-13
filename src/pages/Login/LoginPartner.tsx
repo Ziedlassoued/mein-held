@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 import styles from './LoginPartner.module.css';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useNavigate } from 'react-router';
+
+export interface LoginPartnerProps {
+  companyName: string;
+  email: string;
+  password: string;
+}
 
 const schema = yup.object().shape({
+  companyName: yup.string().required('bitte Firmen Name eingeben'),
   email: yup.string().email().required('bitte Email eingeben'),
   password: yup.string().min(4).max(15).required(),
 });
@@ -14,13 +22,36 @@ const schema = yup.object().shape({
 function LoginPartner(): JSX.Element {
   const {
     register,
-    handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<LoginPartnerProps>({
     resolver: yupResolver(schema),
   });
 
-  const submitForm = handleSubmit((data) => console.log(data));
+  const [companyName, setCompanyName] = useState(
+    localStorage.getItem('current user') || ''
+  );
+
+  useEffect(() => {
+    localStorage.removeItem('current user');
+  }, [setCompanyName]);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+    const response = await fetch(`/api/users/${companyName}`);
+    if (!response.ok) {
+      await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ companyName }),
+      });
+    }
+    localStorage.setItem('Current User', companyName);
+    navigate('/me');
+  };
   return (
     <div>
       <NavBar />
@@ -29,8 +60,17 @@ function LoginPartner(): JSX.Element {
           <div>
             <h3 className={styles.title}>Login für Geschäftspartner</h3>
           </div>
-          <form onSubmit={submitForm}>
+          <form onSubmit={handleSubmit}>
             <div className={styles.partnerDetails}>
+              <div className={styles.inputBox}>
+                <label className={styles.details}>Firmen Name</label>
+                <input
+                  placeholder="Firmen Name"
+                  {...register('companyName')}
+                  onChange={(event) => setCompanyName(event.target.value)}
+                />
+                <p>{errors.companyName?.message}</p>
+              </div>
               <div className={styles.inputBox}>
                 <span className={styles.details}>Email</span>
                 <input

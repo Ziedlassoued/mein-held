@@ -35,14 +35,14 @@
 
 .container form .partnerDetails {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 0;
+  flex-direction: column;
   margin: 20px 0 12px;
 }
 
 form .btn input {
   height: 2.5rem;
-  width: 200%;
+  width: 46%;
   outline: none;
   color: var(--color-primary);
   border: none;
@@ -86,7 +86,52 @@ form .partnerDetails .inputBox {
   border-color: var(--color-tertiary);
 }
 
+.inputBox p {
+  margin: 0;
+}
+
 form .btn {
   height: 3rem;
-  margin: 45px 0;
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 25px 30px;
+    border-radius: 5px;
+    padding-top: 0;
+  }
+
+  form .partnerDetails .inputBox {
+    margin-bottom: 1rem;
+    width: calc(100% / 1 - 20px);
+  }
+
+  .container .title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 0;
+  }
+
+  form .partnerDetails p {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  form .btn {
+    width: 60%;
+    height: 3rem;
+    margin: -40px;
+    padding-left: 2.5rem;
+    padding-top: 4rem;
+  }
+
+  form .btn input {
+    height: 2.5rem;
+    width: 200%;
+    font-weight: 500;
+  }
 }
