@@ -1,5 +1,22 @@
 .main {
   overflow-x: hidden;
+  margin: 100px;
+  padding: 100px;
+}
+
+.main h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.blogContent span {
+  display: block;
+  font-family: var(--font-headline);
+  color: var(--color-primary);
+}
+
+.main h1 span {
+  color: var(--color-tertiary);
 }
 
 .blog {
@@ -40,13 +57,21 @@
   cursor: pointer;
 }
 
-.blogContent span {
-  display: block;
-  font-family: var(--font-headline);
-  color: var(--color-primary);
-}
-
 @media (max-width: 450px) {
+  .main {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .blogPost {
     display: grid;
     grid-template-columns: 1fr;
@@ -58,4 +83,4 @@
     width: 23%;
     box-shadow: 0 15px 20px rgba(0 0 0 / 20%);
   }
-} ;
+}

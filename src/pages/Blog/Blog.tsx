@@ -2,43 +2,57 @@ import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import styles from './Blog.module.css';
 import NavBarBlog from '../../components/NavBar/NavBarBlog/NavBarBlog';
-import BlogBackgroundSrc from '../../assets/blog_background.jpeg';
+
+import PlayBoySrc from '../../assets/playboy.jpeg';
+import BlogPictureSrc from '../../assets/blogpicture.jpeg';
+import MeisterSchreinerSrc from '../../assets/meisterschreiner.jpg';
+import MeisterSrc from '../../assets/meister.jpeg';
 
 function Blog(): JSX.Element {
   return (
-    <div className={styles.main}>
+    <div>
       <NavBarBlog />
-      <h1>Die neuesten Trends im DIY</h1>
-      <div className={styles.blog}>
-        <div className={styles.container}>
-          <div className={styles.blogPost}>
-            <div className={styles.blogContent}>
-              <img src={BlogBackgroundSrc} alt="" />
-              <div className={styles.blogTitle}>
-                <h3>Die neuesten Smarthome Trends</h3>
-                <button className={styles.btnBlog}>mehr lesen</button>
-                <span>2 minuten</span>
-              </div>
-            </div>
-            <div className={styles.blogContent}>
-              <img src={BlogBackgroundSrc} alt="" />
-              <div className={styles.blogTitle}>
-                <h3>Die neuesten Smarthome Trends</h3>
-                <button className={styles.btnBlog}>mehr lesen</button>
-                <span>2 minuten</span>
-              </div>
-            </div>
-            <div className={styles.blogContent}>
-              <img src={BlogBackgroundSrc} alt="" />
-              <div className={styles.blogTitle}>
-                <h3>Die neuesten Smarthome Trends</h3>
-                <button className={styles.btnBlog}>mehr lesen</button>
-                <span>2 minuten</span>
+      <section>
+        <div className={styles.main}>
+          <h1>
+            Die neuesten Trends im <span>DIY</span>
+          </h1>
+          <div className={styles.blog}>
+            <div className={styles.container}>
+              <div className={styles.blogPost}>
+                <div className={styles.blogContent}>
+                  <img src={MeisterSrc} alt="" />
+                  <div className={styles.blogTitle}>
+                    <h3>Die neuesten Smarthome Trends</h3>
+                    <button className={styles.btnBlog}>mehr lesen</button>
+                  </div>
+                </div>
+                <div className={styles.blogContent}>
+                  <img src={MeisterSchreinerSrc} alt="" />
+                  <div className={styles.blogTitle}>
+                    <h3>Die neuesten Smarthome Trends</h3>
+                    <button className={styles.btnBlog}>mehr lesen</button>
+                  </div>
+                </div>
+                <div className={styles.blogContent}>
+                  <img src={BlogPictureSrc} alt="" />
+                  <div className={styles.blogTitle}>
+                    <h3>Die neuesten Smarthome Trends</h3>
+                    <button className={styles.btnBlog}>mehr lesen</button>
+                  </div>
+                </div>
+                <div className={styles.blogContent}>
+                  <img src={PlayBoySrc} alt="" />
+                  <div className={styles.blogTitle}>
+                    <h3>Die neuesten Smarthome Trends</h3>
+                    <button className={styles.btnBlog}>mehr lesen</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <Footer />
     </div>
   );
