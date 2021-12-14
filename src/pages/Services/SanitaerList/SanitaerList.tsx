@@ -6,7 +6,7 @@ import NavBar from '../../../components/NavBar/NavBar';
 import { FormInputProps } from '../../../components/SignUp/SignUpForm/SignUpForm';
 import styles from './Sanitaer.module.css';
 
-function ElektrikerList(): JSX.Element {
+function SanitaerList(): JSX.Element {
   const [users, setUsers] = useState<FormInputProps[]>([]);
 
   useEffect(() => {
@@ -61,4 +61,4 @@ function ElektrikerList(): JSX.Element {
     </div>
   );
 }
-export default ElektrikerList;
+export default SanitaerList;

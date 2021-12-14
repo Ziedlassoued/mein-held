@@ -5,6 +5,7 @@ import Registration from '../../components/Registration/Registration';
 import SelectServices from '../../components/SelectServices/SelectServices';
 import WelcomeSection from '../../components/Welcome/WelcomeSection';
 import styles from './LandingPage.module.css';
+import WelcomeSecond from '../../components/WelcomeSecond/WelcomeSecond';
 
 function LandingPage(): JSX.Element {
   return (
@@ -15,6 +16,9 @@ function LandingPage(): JSX.Element {
         </section>
         <section className={styles.welcomeSection}>
           <WelcomeSection />
+        </section>
+        <section className={styles.welcomeSection}>
+          <WelcomeSecond />
         </section>
       </div>
       <section id="services" className={styles.selectServices}>

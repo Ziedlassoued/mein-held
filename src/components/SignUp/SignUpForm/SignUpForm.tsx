@@ -10,7 +10,6 @@ import styles from './SignUpForm.module.css';
 export interface FormInputProps {
   companyName: string;
   owner: string;
-  image: File;
   email: string;
   street: string;
   houseNumber: number;
@@ -138,15 +137,6 @@ export default function SignUpForm() {
                 <label className={styles.details}>Stadt</label>
                 <input placeholder="Stadt" {...register('city')} />
                 <p> {errors.city?.message} </p>
-              </div>
-              <div className={styles.inputBox}>
-                <label className={styles.details}>Firmen Logo</label>
-                <input
-                  className={styles.inputLogo}
-                  type="file"
-                  {...register('image')}
-                />
-                <p> {errors.image?.message}</p>
               </div>
               <div className={styles.inputBox}>
                 <span className={styles.details}>Passwort</span>
