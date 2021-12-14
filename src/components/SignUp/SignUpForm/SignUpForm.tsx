@@ -36,6 +36,11 @@ const schema = yup.object().shape({
     .positive()
     .integer()
     .required('bitte Haus nr. eingeben'),
+  phonNumber: yup
+    .number()
+    .positive()
+    .integer()
+    .required('bitte Tel. Nr. eingeben'),
   password: yup.string().min(4).max(15).required(),
   confirmPassword: yup.string().oneOf([yup.ref('password'), null]),
   // image: yup
@@ -50,7 +55,6 @@ export default function SignUpForm() {
   const {
     register,
     handleSubmit,
-
     formState: { errors },
   } = useForm<FormInputProps>({
     resolver: yupResolver(schema),
@@ -126,7 +130,7 @@ export default function SignUpForm() {
               <div className={styles.inputBox}>
                 <label className={styles.details}>Haus Nr.</label>
                 <input placeholder="Haus Nr." {...register('houseNumber')} />
-                <p> {errors.houseNumber?.message} </p>
+                <p> {errors.houseNumber?.message}</p>
               </div>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Postleitzahl</label>
