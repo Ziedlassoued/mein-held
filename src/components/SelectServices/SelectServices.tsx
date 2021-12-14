@@ -3,7 +3,6 @@ import styles from './SelectServices.module.css';
 import Elektriker from './Elektriker/Elektriker';
 import Schreiner from './Schreiner/Schreiner';
 import Dachdecker from './Dachdecker/Dachdecker';
-import { Link } from 'react-router-dom';
 import Maler from './Maler/Maler';
 import Klempner from './Klempner/Klempner';
 import Kuechenbau from './Kuechenbau/Kuechenbau';
@@ -12,7 +11,6 @@ import Gaertner from './Gaertner/Gaertner';
 import Fliesenleger from './Fliesenleger/Fliesenleger';
 import Maurer from './Maurer/Maurer';
 import Bodenleger from './Bodenleger/Bodenleger';
-import SmarthomeSrc from '../../assets/servicesIcon/smarthome.png';
 import Smarthome from './Smarthome/Smarthome';
 
 function SelectServices() {

@@ -4,12 +4,13 @@ import SignUpForm from './SignUpForm/SignUpForm';
 import SignUpSuccess from './SignUpSucces/SignUpSuccess';
 
 function SignUp(): JSX.Element {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+  const [isSubmited, setIsSubmited] = useState(false);
+  {
+    setIsSubmited(true);
+  }
   return (
     <div className={styles.container}>
-      {!isSubmitted ? <SignUpForm /> : <SignUpSuccess />}
-      {setIsSubmitted(true)}
+      {!isSubmited ? <SignUpForm /> : <SignUpSuccess />}
     </div>
   );
 }

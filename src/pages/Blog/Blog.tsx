@@ -2,7 +2,6 @@ import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import styles from './Blog.module.css';
 import NavBarBlog from '../../components/NavBar/NavBarBlog/NavBarBlog';
-
 import PlayBoySrc from '../../assets/playboy.jpeg';
 import BlogPictureSrc from '../../assets/blogpicture.jpeg';
 import MeisterSchreinerSrc from '../../assets/meisterschreiner.jpg';

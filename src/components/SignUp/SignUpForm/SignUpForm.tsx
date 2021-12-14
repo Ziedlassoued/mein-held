@@ -10,7 +10,7 @@ import styles from './SignUpForm.module.css';
 export interface FormInputProps {
   companyName: string;
   owner: string;
-  file: File;
+  image: File;
   email: string;
   street: string;
   houseNumber: number;
@@ -39,7 +39,12 @@ const schema = yup.object().shape({
     .required('bitte Haus nr. eingeben'),
   password: yup.string().min(4).max(15).required(),
   confirmPassword: yup.string().oneOf([yup.ref('password'), null]),
-  file: yup.mixed().required('Firmen Logo'),
+  image: yup
+    .mixed()
+    .required()
+    .test('fileSize', 'Die Datei ist zu groß', (value) => {
+      return value && value[0].size < 2000000;
+    }),
 });
 
 export default function SignUpForm() {
@@ -137,9 +142,9 @@ export default function SignUpForm() {
                 <input
                   className={styles.inputLogo}
                   type="file"
-                  {...register('file')}
+                  {...register('image')}
                 />
-                <p> {errors.file?.message}</p>
+                <p> {errors.image?.message}</p>
               </div>
               <div className={styles.inputBox}>
                 <span className={styles.details}>Passwort</span>
@@ -167,7 +172,7 @@ export default function SignUpForm() {
             </div>
             <span className={styles.member}>
               Haben Sie bereits ein Konto? <br />
-              Login {''}
+              Login
               <Link to="/loginpartner" className={styles.link}>
                 hier
               </Link>

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
 import { FormInputProps } from '../../../components/SignUp/SignUpForm/SignUpForm';
@@ -24,23 +25,29 @@ function ElektrikerList(): JSX.Element {
   return (
     <div className={styles.main}>
       <NavBar />
-      <div className={styles.container}>
-        {users?.length === 0 && (
-          <span>keine Diensleister im Moment vorhanden</span>
-        )}
-        <div>
-          <ul>
+      <div className={styles.category}>
+        <h1 className={styles.heading}>
+          Services der Kategorie <span>Elektriker</span>
+        </h1>
+        <div className={styles.boxContainer}>
+          <div className={styles.box}>
+            {users?.length === 0 && (
+              <span>keine Diensleister im Moment vorhanden</span>
+            )}
             {users.map((user) => (
               <div key={user.email}>
                 {user.category === 'Elektriker' && (
                   <div className={styles.row}>
-                    <h2>{user.companyName} </h2>
+                    <h3>{user.companyName} </h3>
                     <p>{user.city}</p>
                   </div>
                 )}
               </div>
             ))}
-          </ul>
+          </div>
+          <Link to={'/SmarthomeList'} className={styles.btn}>
+            suchen
+          </Link>
         </div>
         <Footer />
       </div>

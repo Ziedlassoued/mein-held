@@ -1,15 +1,3 @@
 .main {
-  background-color: var(--color-tertiary);
-}
-
-.container {
-  display: grid;
-  grid-template-rows: auto;
-  row-gap: 1rem;
-  background-color: var(--color-tertiary);
-}
-
-.row {
-  background: var(--color-secondary);
-  margin-right: 10px;
+  background-color: var(--color-background);
 }
