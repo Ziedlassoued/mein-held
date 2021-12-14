@@ -13,6 +13,7 @@ function RatingSecond() {
         onClick={handleRating}
         ratingValue={rating}
         showTooltip
+        size={25}
         tooltipArray={[
           'Unzureichend',
           'Ausreichend',

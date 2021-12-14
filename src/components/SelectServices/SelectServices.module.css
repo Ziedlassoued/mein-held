@@ -11,6 +11,11 @@
   text-transform: uppercase;
 }
 
+.category {
+  height: 100%;
+  width: 100%;
+}
+
 .category .boxContainer {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;

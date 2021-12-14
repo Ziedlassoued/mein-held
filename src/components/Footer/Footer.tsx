@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import Scroll from './ScrollToTop/ScrollToTop';
 
@@ -24,7 +25,9 @@ function Footer(): JSX.Element {
               <li>
                 <a href="#">Guide</a>
                 <a href="#">Unser Blog</a>
-                <a href="#">FAQ</a>
+                <Link to={'/faq}'} className={styles.btn}>
+                  FAQ
+                </Link>
                 <a href="#">Handwerker empfehlen</a>
               </li>
             </ul>

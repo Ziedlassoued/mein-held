@@ -37,7 +37,7 @@ function ElektrikerList(): JSX.Element {
               {user.category === 'Elektriker' && (
                 <div className={styles.box}>
                   <h3>{user.companyName}</h3>
-                  <div>
+                  <div className={styles.rating}>
                     <RatingSecond />
                   </div>
                   <div>

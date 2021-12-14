@@ -12,10 +12,14 @@
 }
 
 .category .boxContainer {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  display: flex;
+  flex-direction: column;
   grid-gap: 1rem;
-  padding-right: 100px;
+  width: 100%;
+}
+
+.rating {
+  margin-left: 350px;
 }
 
 .category .boxContainer .box {
@@ -25,7 +29,7 @@
   margin-left: 100px;
   margin-right: 100px;
   flex: 1 1 15rem;
-  box-shadow: 0 5px 35px rgba(0 0 0 / 70%);
+  box-shadow: 0 5px 35px rgba(0 0 0 / 40%);
 }
 
 .category .boxContainer .box img {
@@ -36,6 +40,7 @@
 .category .boxContainer .box h3 {
   font-size: 2rem;
   color: var(--color-primary);
+  background-color: var(--color-secondary);
   text-align: center;
 }
 
@@ -56,15 +61,23 @@
 
 @media (max-width: 1300px) {
   .category .boxContainer {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rating {
+    margin-left: 16rem;
   }
 }
 
 @media (max-width: 950px) {
   .category .boxContainer {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rating {
+    margin-left: 14rem;
   }
 }
 
@@ -76,5 +89,13 @@
   .category .boxContainer {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .category .boxContainer .box {
+    margin: 1rem;
+  }
+
+  .rating {
+    margin-left: 2.5rem;
   }
 }
