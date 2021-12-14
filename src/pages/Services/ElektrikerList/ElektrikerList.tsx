@@ -26,29 +26,38 @@ function ElektrikerList(): JSX.Element {
     <div className={styles.main}>
       <NavBar />
       <div className={styles.category}>
-        <h1 className={styles.heading}>
-          Services der Kategorie <span>Elektriker</span>
-        </h1>
+        <h1 className={styles.heading}>Elektriker</h1>
+
+        {users?.length === 0 && (
+          <span>keine Diensleister im Moment vorhanden</span>
+        )}
         <div className={styles.boxContainer}>
-          <div className={styles.box}>
-            {users?.length === 0 && (
-              <span>keine Diensleister im Moment vorhanden</span>
-            )}
-            {users.map((user) => (
-              <div key={user.email}>
-                {user.category === 'Elektriker' && (
-                  <div className={styles.row}>
-                    <h3>{user.companyName} </h3>
-                    <p>{user.city}</p>
+          {users.map((user) => (
+            <div key={user.email}>
+              {user.category === 'Elektriker' && (
+                <div className={styles.box}>
+                  <h3>{user.companyName}</h3>
+                  <div>
+                    {user.street} <span>{user.houseNumber}</span>{' '}
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
-          <Link to={'/SmarthomeList'} className={styles.btn}>
-            suchen
-          </Link>
+                  <div>
+                    {user.zip}
+                    <span> {user.city}</span>
+                  </div>
+                  <div>{user.phonNumber}</div>
+                  <div>{user.email}</div>
+                  <Link to={'/me}'} className={styles.btn}>
+                    Seite
+                  </Link>
+                  <details>
+                    <p></p>
+                  </details>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
+
         <Footer />
       </div>
     </div>

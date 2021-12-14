@@ -39,22 +39,24 @@ const schema = yup.object().shape({
     .required('bitte Haus nr. eingeben'),
   password: yup.string().min(4).max(15).required(),
   confirmPassword: yup.string().oneOf([yup.ref('password'), null]),
-  image: yup
-    .mixed()
-    .required()
-    .test('fileSize', 'Die Datei ist zu groß', (value) => {
-      return value && value[0].size < 2000000;
-    }),
+  // image: yup
+  //   .mixed()
+  //   .required()
+  //   .test('fileSize', 'Die Datei ist zu groß', (value) => {
+  //     return value && value[0].size < 2000000;
+  //   }),
 });
 
 export default function SignUpForm() {
   const {
     register,
     handleSubmit,
+
     formState: { errors },
   } = useForm<FormInputProps>({
     resolver: yupResolver(schema),
   });
+
   const onSubmit: SubmitHandler<FormInputProps> = (data) => {
     console.log(data);
     fetch('/api/users/', {
