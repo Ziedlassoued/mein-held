@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
 import { FormInputProps } from '../../../components/SignUp/SignUpForm/SignUpForm';
-
 import styles from './ElektrikerList.module.css';
 
 function ElektrikerList(): JSX.Element {
@@ -57,7 +56,6 @@ function ElektrikerList(): JSX.Element {
             </div>
           ))}
         </div>
-
         <Footer />
       </div>
     </div>
