@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 
-export default function ControlledAccordions() {
+export default function ControlledAccordions(): JSX.Element {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
