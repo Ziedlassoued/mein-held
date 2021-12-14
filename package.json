@@ -16,6 +16,9 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
+    "@devexpress/dx-react-core": "^2.7.6",
+    "@devexpress/dx-react-scheduler": "^2.7.6",
+    "@devexpress/dx-react-scheduler-material-ui": "^2.7.6",
     "@hookform/resolvers": "^2.8.3",
     "@reduxjs/toolkit": "^1.7.0",
     "@types/styled-components": "^5.1.18",
