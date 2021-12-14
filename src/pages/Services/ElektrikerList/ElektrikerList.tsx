@@ -5,6 +5,7 @@ import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
 import { FormInputProps } from '../../../components/SignUp/SignUpForm/SignUpForm';
 import styles from './ElektrikerList.module.css';
+import RatingSecond from '../../../components/Rating/Rating';
 
 function ElektrikerList(): JSX.Element {
   const [users, setUsers] = useState<FormInputProps[]>([]);
@@ -36,6 +37,9 @@ function ElektrikerList(): JSX.Element {
               {user.category === 'Elektriker' && (
                 <div className={styles.box}>
                   <h3>{user.companyName}</h3>
+                  <div>
+                    <RatingSecond />
+                  </div>
                   <div>
                     {user.street} <span>{user.houseNumber}</span>{' '}
                   </div>
