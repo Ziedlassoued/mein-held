@@ -1,3 +1,11 @@
+.main {
+  background: var(--color-background);
+}
+
+.category {
+  margin-left: 32px;
+}
+
 .heading {
   text-align: center;
   color: var(--color-primary);
@@ -19,7 +27,9 @@
 }
 
 .rating {
-  margin-left: 350px;
+  margin-left: 0;
+  justify-content: center;
+  background-color: var(--color-background);
 }
 
 .category .boxContainer .box {
@@ -29,7 +39,6 @@
   margin-left: 100px;
   margin-right: 100px;
   flex: 1 1 15rem;
-  box-shadow: 0 5px 35px rgba(0 0 0 / 40%);
 }
 
 .category .boxContainer .box img {

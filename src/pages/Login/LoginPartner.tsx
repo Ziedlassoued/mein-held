@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 import styles from './LoginPartner.module.css';
@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useNavigate } from 'react-router';
+import { User, verifyLogin } from './verifyLogin';
 
 export interface LoginPartnerProps {
   companyName: string;
@@ -27,31 +28,19 @@ function LoginPartner(): JSX.Element {
     resolver: yupResolver(schema),
   });
 
-  const [companyName, setCompanyName] = useState(
-    localStorage.getItem('current user') || ''
-  );
-
-  useEffect(() => {
-    localStorage.removeItem('current user');
-  }, [setCompanyName]);
-
   const navigate = useNavigate();
+  const [companyName, setCompanyName] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = async (event: FormEvent) => {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const response = await fetch(`/api/users/${companyName}`);
-    if (!response.ok) {
-      await fetch('/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ companyName }),
-      });
-    }
-    localStorage.setItem('Current User', companyName);
+
+    const user: Partial<User> = { companyName, password };
+    await verifyLogin(user);
+    localStorage.setItem('Current user', companyName);
     navigate('/me');
-  };
+  }
+
   return (
     <div>
       <NavBar />
@@ -64,11 +53,7 @@ function LoginPartner(): JSX.Element {
             <div className={styles.partnerDetails}>
               <div className={styles.inputBox}>
                 <label className={styles.details}>Firmen Name</label>
-                <input
-                  placeholder="Firmen Name"
-                  {...register('companyName')}
-                  onChange={(event) => setCompanyName(event.target.value)}
-                />
+                <input placeholder="Firmen Name" {...register('companyName')} />
                 <p>{errors.companyName?.message}</p>
               </div>
               <div className={styles.inputBox}>
@@ -77,6 +62,7 @@ function LoginPartner(): JSX.Element {
                   type="email"
                   placeholder="Email"
                   {...register('email')}
+                  onChange={(event) => setCompanyName(event.target.value)}
                 />
                 <p> {errors.email?.message} </p>
               </div>
@@ -86,6 +72,7 @@ function LoginPartner(): JSX.Element {
                   type="password"
                   placeholder="Passwort"
                   {...register('password')}
+                  onChange={(event) => setPassword(event.target.value)}
                 />
                 <p> {errors.password?.message} </p>
               </div>

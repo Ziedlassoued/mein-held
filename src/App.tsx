@@ -50,7 +50,10 @@ function App() {
         <Route path="/loginpartner" element={<LoginPartner />}></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/contact-us" element={<Contact />}></Route>
-        <Route path="/me" element={<PartnerLandingPage />}></Route>
+        <Route
+          path="/elektrikermeister"
+          element={<PartnerLandingPage />}
+        ></Route>
         <Route path="/faq" element={<Faq />}></Route>
       </Routes>
     </Router>

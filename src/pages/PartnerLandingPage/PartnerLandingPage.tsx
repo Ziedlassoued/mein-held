@@ -3,12 +3,10 @@ import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 
 function PartnerLandingPage(): JSX.Element {
-  const companyName = localStorage.getItem('current user');
-
   return (
     <div>
       <NavBar />
-      <div>Guten Tag {companyName}</div>
+      <div>hello world!</div>
       <Footer />
     </div>
   );

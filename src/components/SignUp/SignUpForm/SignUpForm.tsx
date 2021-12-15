@@ -170,7 +170,7 @@ export default function SignUpForm() {
               Haben Sie bereits ein Konto? <br />
               Login
               <Link to="/loginpartner" className={styles.link}>
-                hier
+                {''} hier
               </Link>
             </span>
           </form>

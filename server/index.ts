@@ -3,9 +3,11 @@ dotenv.config();
 import express from 'express';
 import path from 'path';
 import { connectDatabase, getUserCollection } from './utils/database';
+import cookieParser from 'cookie-parser';
 
 const { PORT = 3001 } = process.env;
 const app = express();
+app.use(cookieParser());
 
 if (!process.env.MONGODB_URI) {
   throw new Error('No MongoDB URI dotenv variable');
@@ -42,35 +44,33 @@ app.get('/api/users/:category', async (request, response) => {
 
 // Login user
 app.post('/api/login', async (request, response) => {
-  const { companyName, email, password } = request.body;
-
+  const logedUser = request.body;
   const userCollection = getUserCollection();
 
   const existingUser = await userCollection.findOne({
-    companyName,
-    email,
-    password,
+    companyName: logedUser.companyName,
+    email: logedUser.email,
+    password: logedUser.password,
   });
   if (existingUser) {
-    response.setHeader('Set-Cookie', `username=${companyName}`);
-    response.send(existingUser);
+    response.setHeader('Set-Cookie', `name=${logedUser.companyName}`);
+    response.status(200).send('login successful');
   } else {
     response
       .status(401)
-      .send('Login failed. Check if username and password is correct');
+      .send('Login failed. Check if email and password are correct');
   }
 });
 
-// Get logged User
 app.get('/api/me', async (request, response) => {
-  const username = request.cookies.username;
+  const companyName = request.cookies.companyName;
   const usersCollection = getUserCollection();
   const loggedUser = await usersCollection.findOne({
-    username: username,
+    companyName: companyName,
   });
 
   if (loggedUser) {
-    response.send(loggedUser);
+    response.status(200).send(loggedUser);
   } else {
     response.status(404).send('User not found');
   }

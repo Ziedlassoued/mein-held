@@ -16,6 +16,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
+    "@date-io/date-fns": "^2.11.0",
     "@devexpress/dx-react-core": "^2.7.6",
     "@devexpress/dx-react-scheduler": "^2.7.6",
     "@devexpress/dx-react-scheduler-material-ui": "^2.7.6",
@@ -29,6 +30,7 @@
     "@types/react-calendar": "^3.4.3",
     "@types/styled-components": "^5.1.18",
     "axios": "^0.24.0",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongodb": "^4.2.1",
@@ -50,6 +52,7 @@
     "@storybook/addon-essentials": "^6.4.0-rc.3",
     "@storybook/addon-links": "^6.4.0-rc.3",
     "@storybook/react": "^6.4.0-rc.3",
+    "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.13",
     "@types/node": "^16.11.12",
     "@types/react": "^17.0.0",

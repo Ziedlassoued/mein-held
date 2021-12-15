@@ -59,6 +59,10 @@
   padding: 0.5rem;
 }
 
+.text {
+  background-color: var(--color-secondary);
+}
+
 @media (max-width: 1300px) {
   .category .boxContainer {
     display: flex;
@@ -87,15 +91,17 @@
   }
 
   .category .boxContainer {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+    width: 95%;
   }
 
   .category .boxContainer .box {
-    margin: 1rem;
+    margin: 0.5rem;
   }
 
   .rating {
-    margin-left: 2.5rem;
+    margin-left: 7rem;
   }
 }

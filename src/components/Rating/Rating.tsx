@@ -14,13 +14,7 @@ function RatingSecond() {
         ratingValue={rating}
         showTooltip
         size={25}
-        tooltipArray={[
-          'Unzureichend',
-          'Ausreichend',
-          'Befriedigend',
-          'Gut',
-          'Sehr Gut',
-        ]}
+        tooltipArray={['?', '!', 'ok', 'Gut', 'Top']}
       />
     </div>
   );

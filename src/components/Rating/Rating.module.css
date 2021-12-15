@@ -1,7 +1,7 @@
 .container {
   background-color: var(--color-primary);
   border-radius: 5px;
-  width: 500px;
+  width: 100%;
 }
 
 @media (max-width: 1300px) {
