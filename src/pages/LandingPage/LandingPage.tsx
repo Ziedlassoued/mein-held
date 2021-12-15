@@ -4,6 +4,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Registration from '../../components/Registration/Registration';
 import SelectServices from '../../components/SelectServices/SelectServices';
 import styles from './LandingPage.module.css';
+import WelcomeSection from '../../components/Welcome/WelcomeSection';
 
 function LandingPage(): JSX.Element {
   return (
@@ -11,6 +12,9 @@ function LandingPage(): JSX.Element {
       <div className={styles.main}>
         <section className={styles.navBar}>
           <NavBar />
+        </section>
+        <section className={styles.welcome}>
+          <WelcomeSection />
         </section>
       </div>
       <section id="services" className={styles.selectServices}>

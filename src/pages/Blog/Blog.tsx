@@ -2,15 +2,16 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
+import NavBar from '../../components/NavBar/NavBar';
 
 export default function TitlebarImageList() {
   return (
-    <ImageList sx={{ width: 500, height: 900 }}>
+    <ImageList sx={{ width: 400, height: 900 }}>
       <ImageListItem key="Subheader" cols={2}>
-        <ListSubheader component="div">December</ListSubheader>
+        <NavBar />
+        {/* <ListSubheader component="div">Blog</ListSubheader> */}
       </ImageListItem>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
@@ -40,74 +41,74 @@ export default function TitlebarImageList() {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
-    author: '@bkristastucchio',
+    img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    title: 'Contra Costa Centre',
+    author: '@sunburned_surveyor',
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
-    author: '@rollelflex_graphy726',
+    img: 'https://images.unsplash.com/photo-1516216628859-9bccecab13ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80',
+    title: 'worker',
+    author: '@solimonster',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
-    author: '@helloimnik',
+    img: 'https://images.unsplash.com/photo-1558227691-41ea78d1f631?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    title: 'Maurer',
+    author: '@arronchoi',
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
-    author: '@nolanissac',
+    img: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    title: 'Schreiner',
+    author: '@jeriden94',
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
-    author: '@hjrc33',
+    img: 'https://images.unsplash.com/photo-1564182842519-8a3b2af3e228?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80',
+    title: 'Schmied',
+    author: '@spencerdavis',
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-    author: '@arwinneil',
+    img: 'https://images.unsplash.com/photo-1607134541550-2994abb8077b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    title: 'vermessung',
+    author: '@sunburned_surveyor',
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-    author: '@tjdragotta',
+    img: 'https://images.unsplash.com/photo-1482731215275-a1f151646268?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+    title: 'Renovieren',
+    author: '@henry',
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
-    author: '@katie_wasserman',
+    img: 'https://images.unsplash.com/photo-1561343228-e6a5c693d352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    title: 'Handwerker',
+    author: '@deanbennett',
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
-    author: '@silverdalex',
+    img: 'https://images.unsplash.com/photo-1569496736555-47c448d556f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80',
+    title: 'Firendly',
+    author: '@mitch_hodge',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
-    author: '@shelleypauls',
+    img: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80',
+    title: 'Elekltriker',
+    author: '@emmanuel',
   },
   {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
-    author: '@peterlaster',
+    img: 'https://images.unsplash.com/photo-1528953030358-b0c7de371f1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=651&q=80',
+    title: 'Factory worker',
+    author: '@ahsanization',
   },
   {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
-    author: '@southside_customs',
+    img: 'https://images.unsplash.com/photo-1552879890-3a06dd3a06c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80',
+    title: 'Helme',
+    author: '@popandzebra',
     cols: 2,
   },
 ];
