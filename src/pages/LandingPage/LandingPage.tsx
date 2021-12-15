@@ -5,6 +5,9 @@ import Registration from '../../components/Registration/Registration';
 import SelectServices from '../../components/SelectServices/SelectServices';
 import styles from './LandingPage.module.css';
 import WelcomeSection from '../../components/Welcome/WelcomeSection';
+import SimplePaper from '../../components/ServiceCard/ServiceCard';
+import BasicCard from '../../components/ServiceCard/ServiceCard2';
+import MultiActionAreaCard from '../../components/ServiceCard/ServiceCardImage';
 
 function LandingPage(): JSX.Element {
   return (
@@ -25,6 +28,9 @@ function LandingPage(): JSX.Element {
           <Registration />
         </section>
         <section className={styles.footer}>
+          <SimplePaper />
+          <BasicCard />
+          <MultiActionAreaCard />
           <Footer />
         </section>
       </div>

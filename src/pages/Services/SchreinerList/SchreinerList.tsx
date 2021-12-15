@@ -79,6 +79,7 @@ function SchreinerList(): JSX.Element {
               {user.category === 'Schreiner' && (
                 <Card sx={{ maxWidth: 345 }}>
                   <CardHeader
+                    sx={{ bgcolor: orange[50] }}
                     avatar={
                       <Avatar
                         sx={{ bgcolor: orange[700] }}
