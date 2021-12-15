@@ -20,15 +20,9 @@ import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
 import PartnerLandingPage from './pages/PartnerLandingPage/PartnerLandingPage';
 import Faq from './pages/Faq/Faq';
+import SchreinerDetails from './pages/SchreinerDetails/SchreinerDetails';
 
 function App() {
-  // const [message, setMessage] = useState('');
-
-  // useEffect(() => {
-  //   fetch('/api/hello')
-  //     .then((response) => response.json())
-  //     .then((result) => setMessage(result.message));
-  // }, []);
   return (
     <Router>
       <Routes>
@@ -55,6 +49,7 @@ function App() {
           element={<PartnerLandingPage />}
         ></Route>
         <Route path="/faq" element={<Faq />}></Route>
+        <Route path="/schreinerdetails" element={<SchreinerDetails />}></Route>
       </Routes>
     </Router>
   );

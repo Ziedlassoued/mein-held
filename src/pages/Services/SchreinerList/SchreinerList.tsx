@@ -18,7 +18,6 @@ import { orange } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import PreviewIcon from '@mui/icons-material/Preview';
 import SchreinerSrc from '../../../assets/servicesIcon/schreiner.png';
 import CarpenterIcon from '@mui/icons-material/Carpenter';
 import CallIcon from '@mui/icons-material/Call';
@@ -26,6 +25,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { Link } from 'react-router-dom';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 import RatingSecond from '../../../components/Rating/Rating';
 
@@ -120,9 +120,9 @@ function SchreinerList(): JSX.Element {
                       <WhatsAppIcon />
                     </IconButton>
                     <IconButton aria-label="share">
-                      <Link to={'/me}'} className={styles.btn}>
+                      <Link to={'/schreinerdetails}'} className={styles.btn}>
                         {' '}
-                        <PreviewIcon />
+                        <FaArrowAltCircleRight />
                       </Link>
                     </IconButton>
                     <ExpandMore
