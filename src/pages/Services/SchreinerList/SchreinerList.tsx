@@ -18,7 +18,7 @@ import { orange } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import SchreinerSrc from '../../../assets/servicesIcon/schreiner.png';
+import SchreinerSrc from '../../../assets/serviceImages/schreiner.jpeg';
 import CarpenterIcon from '@mui/icons-material/Carpenter';
 import CallIcon from '@mui/icons-material/Call';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -79,10 +79,10 @@ function SchreinerList(): JSX.Element {
               {user.category === 'Schreiner' && (
                 <Card sx={{ maxWidth: 345 }}>
                   <CardHeader
-                    sx={{ bgcolor: orange[50] }}
+                    sx={{ bgcolor: orange[600] }}
                     avatar={
                       <Avatar
-                        sx={{ bgcolor: orange[700] }}
+                        sx={{ bgcolor: orange[200] }}
                         aria-label="company"
                       >
                         <CarpenterIcon />
@@ -109,7 +109,7 @@ function SchreinerList(): JSX.Element {
                       </div>
                     </Typography>
                   </CardContent>
-                  <CardActions sx={{ bgcolor: orange[50] }} disableSpacing>
+                  <CardActions sx={{ bgcolor: orange[600] }} disableSpacing>
                     <IconButton aria-label="add to favorites">
                       <FavoriteIcon />
                     </IconButton>

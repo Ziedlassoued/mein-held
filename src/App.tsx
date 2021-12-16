@@ -19,8 +19,8 @@ import LoginPartner from './pages/Login/LoginPartner';
 import Blog from './pages/Blog/Blog';
 import Contact from './pages/Contact/Contact';
 import PartnerLandingPage from './pages/PartnerLandingPage/PartnerLandingPage';
-import Faq from './pages/Faq/Faq';
 import SchreinerDetails from './pages/SchreinerDetails/SchreinerDetails';
+import Faq from './pages/Faq/Faq';
 
 function App() {
   return (

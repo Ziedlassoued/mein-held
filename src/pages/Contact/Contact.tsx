@@ -15,32 +15,50 @@ function Contact() {
           <div className={styles.box}>
             <div className={styles.contactForm}>
               <h3>Schreib uns eine Nachricht</h3>
-              <form>
+              <form
+                action="https://formsubmit.co/zied.lassoued@outlook.de"
+                method="POST"
+              >
                 <div className={styles.formBox}>
                   <div className={styles.row50}>
                     <div className={styles.inputBox}>
                       <span>Vorname</span>
-                      <input type="text" placeholder="Vorname" />
+                      <input type="text" placeholder="Vorname" name="Vorname" />
                     </div>
                     <div className={styles.inputBox}>
                       <span>Nachname</span>
-                      <input type="text" placeholder="Nachname" />
+                      <input
+                        type="text"
+                        placeholder="Nachname"
+                        name="Nachname"
+                      />
                     </div>
                   </div>
                   <div className={styles.row50}>
                     <div className={styles.inputBox}>
                       <span>Email</span>
-                      <input type="text" placeholder="beispiel@email.de" />
+                      <input
+                        type="text"
+                        placeholder="beispiel@email.de"
+                        name="email"
+                      />
                     </div>
                     <div className={styles.inputBox}>
                       <span>Mobile</span>
-                      <input type="text" placeholder="+49 123 123" />
+                      <input
+                        type="text"
+                        placeholder="+49 123 123"
+                        name="Tel. Nr."
+                      />
                     </div>
                   </div>
                   <div className={styles.row100}>
                     <div className={styles.inputBox}>
                       <span>Message</span>
-                      <textarea placeholder="Nachricht hier schreiben"></textarea>
+                      <textarea
+                        placeholder="Nachricht hier schreiben"
+                        name="text"
+                      ></textarea>
                     </div>
                   </div>
                   <div className={styles.row100}>
