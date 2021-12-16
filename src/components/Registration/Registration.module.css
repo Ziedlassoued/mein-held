@@ -44,14 +44,14 @@ p {
   line-height: 2.9rem;
   width: 75%;
   height: 3rem;
-  border-radius: 5px;
+  border-radius: 5rem;
   font-size: 20px;
   font-family: var(--font-headline);
   cursor: pointer;
 }
 
 .application:hover {
-  background: linear-gradient(135deg, orange, #ededed);
+  background-color: var(--color-tertiary);
   transition: all 0.5s ease-out;
 }
 
@@ -64,14 +64,14 @@ p {
   line-height: 2.9rem;
   width: 75%;
   height: 3rem;
-  border-radius: 5px;
+  border-radius: 5rem;
   font-size: 20px;
   font-family: var(--font-headline);
   cursor: pointer;
 }
 
 .login:hover {
-  background: linear-gradient(135deg, orange, #ededed);
+  background-color: var(--color-tertiary);
   transition: all 0.5s ease-out;
 }
 
@@ -90,7 +90,12 @@ p {
     width: 300px;
   }
 
+  .application {
+    font-size: 1rem;
+  }
+
   .login {
     width: 100%;
+    font-size: 1rem;
   }
 }

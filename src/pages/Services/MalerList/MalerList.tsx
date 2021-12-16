@@ -5,6 +5,7 @@ import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
 import { FormInputProps } from '../../../components/SignUp/SignUpForm/SignUpForm';
 import styles from './MalerList.module.css';
+import MalerSrc from '../../../assets/serviceImages/maler.jpeg';
 
 function MalerList(): JSX.Element {
   const [users, setUsers] = useState<FormInputProps[]>([]);
@@ -24,18 +25,21 @@ function MalerList(): JSX.Element {
   return (
     <div className={styles.main}>
       <NavBar />
-      <div className={styles.category}>
-        <h1 className={styles.heading}>Maler</h1>
+      <div className={styles.container}>
+        <h2 className={styles.title}>Maler</h2>
 
         {users?.length === 0 && (
           <span>keine Diensleister im Moment vorhanden</span>
         )}
-        <div className={styles.boxContainer}>
+        <div className={styles.teamrow}>
           {users.map((user) => (
             <div key={user.email}>
               {user.category === 'Maler' && (
-                <div className={styles.box}>
-                  <h3>{user.companyName}</h3>
+                <div className={styles.teammember}>
+                  <h2>{user.companyName}</h2>
+                  <div className={styles.img}>
+                    <img src={MalerSrc} alt="" />
+                  </div>
                   <div>
                     {user.street} <span>{user.houseNumber}</span>{' '}
                   </div>
@@ -49,7 +53,13 @@ function MalerList(): JSX.Element {
                     Seite
                   </Link>
                   <details>
-                    <p></p>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Voluptates deserunt, impedit doloremque quam quia vel a
+                      repellendus molestias sunt numquam eum consectetur
+                      mollitia delectus maiores possimus quidem porro nobis
+                      officiis?
+                    </p>
                   </details>
                 </div>
               )}

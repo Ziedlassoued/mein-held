@@ -42,7 +42,7 @@
   cursor: pointer;
   margin: 2rem 0.5rem;
   font-family: var(--font-headline);
-  font-size: 1rem;
+  font-size: 20px;
 }
 
 .content a button:hover {

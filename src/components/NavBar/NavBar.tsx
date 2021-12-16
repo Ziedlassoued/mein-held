@@ -6,15 +6,15 @@ import CloseSrc from '../../assets/close.png';
 import BurgerMenuSrc from '../../assets/burgermenu.png';
 
 function NavBar(): JSX.Element {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className={styles.navBar}>
       <img className={styles.imageLogo} src={ConstructionManSrc} alt="logo" />
       <h1 className={styles.logo}>Mein Held</h1>
       <ul
-        className={isMobile ? styles.listMobile : styles.list}
-        onClick={() => setIsMobile(false)}
+        className={isOpen ? styles.listMobile : styles.list}
+        onClick={() => setIsOpen(false)}
       >
         <Link className={styles.items} to="/">
           <li>Home</li>
@@ -32,8 +32,8 @@ function NavBar(): JSX.Element {
           <li>Contact us</li>
         </Link>
       </ul>
-      <button className={styles.btn} onClick={() => setIsMobile(!isMobile)}>
-        {isMobile ? (
+      <button className={styles.btn} onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? (
           <img className={styles.iconClose} src={CloseSrc} alt="close" />
         ) : (
           <img className={styles.iconMobile} src={BurgerMenuSrc} alt="menu" />

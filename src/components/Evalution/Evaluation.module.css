@@ -1,12 +1,11 @@
 .container {
-  background-color: var(--color-secondary);
   border-radius: 5px;
   width: 500px;
 }
 
 @media (max-width: 500px) {
   .container {
-    width: 150px;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    transform: translateX(15%);
   }
 }
