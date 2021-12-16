@@ -6,7 +6,7 @@ import DesktopCalendarSrc from '../../assets/Desktop_calendar.png';
 
 function Registration(): JSX.Element {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="#registration">
       <h2>Geschäftspartner</h2>
       <div className={styles.container}>
         <div className={styles.publicity}>
