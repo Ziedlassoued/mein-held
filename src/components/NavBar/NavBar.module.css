@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 6rem;
+  height: 6.5rem;
   background-color: var(--color-secondary);
+  z-index: 1000;
+  position: relative;
 }
 
 .imageLogo {

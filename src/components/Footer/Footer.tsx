@@ -12,7 +12,9 @@ function Footer(): JSX.Element {
             <h4>Kundenservice</h4>
             <ul className={styles.list}>
               <li>
-                <a href="#">Wir helfen dir weiter</a>
+                <Link to={'/Contact-us}'} className={styles.btn}>
+                  Wir helfen dir weiter
+                </Link>
                 <a href="#">0800 - 12 34 56</a>
                 <a href="#">Mo - Sa 08:00 - 20:00 Uhr</a>
                 <a href="#">meinheld@meinheld.de</a>
