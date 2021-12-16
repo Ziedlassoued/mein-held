@@ -8,6 +8,7 @@ import WelcomeSection from '../../components/Welcome/WelcomeSection';
 import SimplePaper from '../../components/ServiceCard/ServiceCard';
 import BasicCard from '../../components/ServiceCard/ServiceCard2';
 import MultiActionAreaCard from '../../components/ServiceCard/ServiceCardImage';
+import Card from '../../components/Card/Card';
 
 function LandingPage(): JSX.Element {
   return (
@@ -22,6 +23,7 @@ function LandingPage(): JSX.Element {
       </div>
       <section id="services" className={styles.selectServices}>
         <SelectServices />
+        <Card />
       </section>
       <div className={styles.out}>
         <section className={styles.registration}>
