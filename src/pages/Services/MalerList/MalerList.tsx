@@ -5,7 +5,7 @@ import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
 import { FormInputProps } from '../../../components/SignUp/SignUpForm/SignUpForm';
 import styles from './MalerList.module.css';
-import MalerSrc from '../../../assets/serviceImages/maler.jpeg';
+import MalerSrc from '../../../assets/serviceImages/Maler.jpeg';
 
 function MalerList(): JSX.Element {
   const [users, setUsers] = useState<FormInputProps[]>([]);
