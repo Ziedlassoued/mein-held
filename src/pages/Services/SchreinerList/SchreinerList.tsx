@@ -26,7 +26,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { Link } from 'react-router-dom';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
-
 import RatingSecond from '../../../components/Rating/Rating';
 
 interface ExpandMoreProps extends IconButtonProps {
@@ -34,7 +33,7 @@ interface ExpandMoreProps extends IconButtonProps {
 }
 
 const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
+  const { ...other } = props;
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
   transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
