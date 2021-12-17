@@ -7,11 +7,8 @@ import BodenlegerList from './pages/Services/BodenlegerList/BodenlegerList';
 import SignUpForm from './components/SignUp/SignUpForm/SignUpForm';
 import SchreinerList from './pages/Services/SchreinerList/SchreinerList';
 import DachdeckerList from './pages/Services/DachdeckerList/DachdeckerList';
-import Smarthome from './components/SelectServices/Smarthome/Smarthome';
 import MalerList from './pages/Services/MalerList/MalerList';
 import KlempnerList from './pages/Services/KlempnerList/KlempnerList';
-import Kuechenbau from './components/SelectServices/Kuechenbau/Kuechenbau';
-import Sanitaer from './components/SelectServices/Sanitaer/Sanitaer';
 import GaertnerList from './pages/Services/GaertnerList/GaertnerList';
 import FliesenlegerList from './pages/Services/FliesenlegerList/FliesenlegerList';
 import MaurerList from './pages/Services/MaurerList/MaurerList';
@@ -21,6 +18,9 @@ import Contact from './pages/Contact/Contact';
 import PartnerLandingPage from './pages/PartnerLandingPage/PartnerLandingPage';
 import SchreinerDetails from './pages/SchreinerDetails/SchreinerDetails';
 import Faq from './pages/Faq/Faq';
+import SmarthomeList from './pages/Services/SmarthomeList/SmarthomeList';
+import KuechenbauList from './pages/Services/KuechenbauList/KuechenbauList';
+import SanitaerList from './pages/Services/SanitaerList/SanitaerList';
 
 function App() {
   return (
@@ -30,11 +30,11 @@ function App() {
         <Route path="/ElektrikerList" element={<ElektrikerList />}></Route>
         <Route path="/SchreinerList" element={<SchreinerList />}></Route>
         <Route path="/DachdeckerList" element={<DachdeckerList />}></Route>
-        <Route path="/Smarthome" element={<Smarthome />}></Route>
+        <Route path="/SmarthomeList" element={<SmarthomeList />}></Route>
         <Route path="/MalerList" element={<MalerList />}></Route>
         <Route path="/KlempnerList" element={<KlempnerList />}></Route>
-        <Route path="/Kuechenbau" element={<Kuechenbau />}></Route>
-        <Route path="/Sanitaer" element={<Sanitaer />}></Route>
+        <Route path="/KuechenbauList" element={<KuechenbauList />}></Route>
+        <Route path="/SanitaerList" element={<SanitaerList />}></Route>
         <Route path="/GaertnerList" element={<GaertnerList />}></Route>
         <Route path="/FliesenlegerList" element={<FliesenlegerList />}></Route>
         <Route path="/MaurerList" element={<MaurerList />}></Route>
