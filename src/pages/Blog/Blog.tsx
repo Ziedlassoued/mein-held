@@ -8,7 +8,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 export default function TitlebarImageList() {
   return (
-    <ImageList sx={{ width: 400, height: 900 }}>
+    <ImageList sx={{ width: 410, height: 900 }}>
       <ImageListItem key="Subheader" cols={2}>
         <NavBar />
         {/* <ListSubheader component="div">Blog</ListSubheader> */}
