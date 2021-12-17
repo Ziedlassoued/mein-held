@@ -2,8 +2,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 6rem;
+  height: 6.5rem;
   background-color: var(--color-secondary);
+  z-index: 1000;
+  position: relative;
 }
 
 .imageLogo {
@@ -48,7 +50,7 @@
   display: none;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1130px) {
   .navBar {
     display: flex;
     justify-content: flex-start;

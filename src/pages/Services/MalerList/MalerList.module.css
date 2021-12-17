@@ -1,3 +1,115 @@
 .container {
-  background-color: var(--color-background);
+  background: white;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-tertiary);
+  margin: 10px 0;
+  position: relative;
+  font-size: 3rem;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  height: 4px;
+  background-image: linear-gradient(to left, transparent 5%, #333);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.teamrow {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.teammember {
+  margin: 20px;
+  text-align: center;
+  padding: 20px 10px;
+  cursor: pointer;
+  max-width: 300px;
+  transition: all 0.3s;
+  background-color: var(--color-secondary);
+  border-radius: 5%;
+  font-family: var(--font-headline);
+}
+
+.teammember:hover {
+  box-shadow: 0 10px 20px rgba(0 0 0 / 10%);
+  transform: translateY(-20px);
+}
+
+.teammember img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid orange;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.teammember h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+.teammember p {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+@media (max-width: 1300px) {
+  .teamrow {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+@media (max-width: 950px) {
+  .teamrow {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding-right: 0;
+    padding-left: 3rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .teamrow {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .teammember {
+    height: 200px;
+  }
+
+  .teammember img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .teammember h2 {
+    font-size: 1.5rem;
+  }
 }

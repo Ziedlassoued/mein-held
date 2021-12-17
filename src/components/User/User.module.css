@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  background-color: var(--color-secondary);
+  gap: 0.3rem;
+  padding: 1.4rem 1.2rem;
+  border-radius: 1.25rem;
+}

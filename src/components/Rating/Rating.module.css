@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    width: 300px;
+    margin-bottom: 1rem;
+  }
+}
