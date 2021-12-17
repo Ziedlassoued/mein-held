@@ -1,16 +1,16 @@
 import React from 'react';
 import styles from './Card.module.css';
 import DachdeckerSrc from '../../assets/serviceImages/Dachdecker.jpeg';
-import FliesenlegerSrc from '../../assets/serviceImages/fliesenleger.jpeg';
+import FliesenlegerSrc from '../../assets/serviceImages/Fliesenleger.jpeg';
 import ElektrikerSrc from '../../assets/serviceImages/elektriker.jpeg';
 import KlempnerSrc from '../../assets/serviceImages/klempner.jpeg';
 import SchreinerSrc from '../../assets/serviceImages/schreiner.jpeg';
 import SmarthomeSrc from '../../assets/serviceImages/smarthome.jpeg';
-import MalerSrc from '../../assets/serviceImages/maler.jpeg';
-import KuechenbauSrc from '../../assets/serviceImages/küchenbau.jpeg';
+import MalerSrc from '../../assets/serviceImages/Maler.jpeg';
+import KuechenbauSrc from '../../assets/serviceImages/Küchenbau.jpeg';
 import SanitaerSrc from '../../assets/serviceImages/sanitär.jpeg';
 import GaertnerSrc from '../../assets/serviceImages/gärtner.jpeg';
-import MaurerSrc from '../../assets/serviceImages/maurer.jpeg';
+import MaurerSrc from '../../assets/serviceImages/Maurer.jpeg';
 import BodenLegerSrc from '../../assets/serviceImages/bodenleger.jpeg';
 import { Link } from 'react-router-dom';
 
