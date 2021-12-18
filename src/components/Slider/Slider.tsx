@@ -4,7 +4,7 @@ import { BiChevronRight, BiChevronLeft } from 'react-icons/bi';
 import styles from './Slider.module.css';
 
 interface SliderProps {
-  slides: string;
+  slides: any;
 }
 
 function Slider({ slides }: SliderProps) {
