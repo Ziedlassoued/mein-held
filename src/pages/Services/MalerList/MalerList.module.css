@@ -1,7 +1,7 @@
 .container {
   background: white;
   padding-right: 3rem;
-  padding-left: 3rem;
+  padding-left: 1rem;
 }
 
 .title {
@@ -93,7 +93,6 @@
 @media (max-width: 500px) {
   .container {
     padding-right: 0;
-    padding-left: 3rem;
   }
 
   .heading {

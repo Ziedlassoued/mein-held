@@ -71,8 +71,10 @@ function LoginPartner(): JSX.Element {
                 />
                 <p> {errors.password?.message} </p>
               </div>
-              <div className={styles.btn}>
-                <input type="submit" id="submit" value="Anmelden" />
+              <div>
+                <div className={styles.btn}>
+                  <input type="submit" id="submit" value="Anmelden" />
+                </div>
               </div>
             </div>
           </form>

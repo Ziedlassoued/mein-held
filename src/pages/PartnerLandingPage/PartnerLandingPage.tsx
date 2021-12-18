@@ -53,6 +53,14 @@ function PartnerLandingPage(): JSX.Element {
                       </div>
                       <div>{user.phonNumber}</div>
                       <div>{user.email}</div>
+                      <div className={styles.contactMap}>
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.426747309047!2d7.471252016017439!3d51.37683442806167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b93c8de5f7490b%3A0xfbe167e8443ee396!2sBoeler%20Str.%2C%20Hagen!5e0!3m2!1sde!2sde!4v1639839115134!5m2!1sde!2sde"
+                          width="330"
+                          height="300"
+                          loading="lazy"
+                        ></iframe>
+                      </div>
                     </div>
                   </div>
                 )}

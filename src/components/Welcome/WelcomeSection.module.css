@@ -98,7 +98,7 @@
 @media (max-width: 450px) {
   .container {
     text-align: center;
-    margin-top: o;
+    margin-top: 0;
     padding: 0;
     background-image: url('../../assets/background.jpeg');
   }

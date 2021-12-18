@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../../../components/Footer/Footer';
 import NavBar from '../../../components/NavBar/NavBar';
 import { FormInputProps } from '../../../components/SignUp/SignUpForm/SignUpForm';
 import styles from './MalerList.module.css';
@@ -59,7 +58,6 @@ function MalerList(): JSX.Element {
             ))}
           </div>
         </Link>
-        <Footer />
       </div>
     </div>
   );

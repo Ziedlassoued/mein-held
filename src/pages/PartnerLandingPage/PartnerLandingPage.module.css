@@ -160,7 +160,6 @@
 
   .contactMap {
     padding: 0;
-    min-height: 300px;
   }
 
   .formBox .row50 {
@@ -175,5 +174,24 @@
 
   .contactInfo {
     padding: 5px;
+  }
+
+  .contactMap iframe {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #333;
+  }
+
+  .inputBox span {
+    font-family: var(--font-headline);
+    margin-left: 1rem;
+  }
+
+  .inputBox textarea {
+    margin: 1rem;
+  }
+
+  .inputBox input {
+    margin-left: 1rem;
   }
 }
