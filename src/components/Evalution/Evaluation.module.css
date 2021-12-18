@@ -5,7 +5,6 @@
 
 @media (max-width: 500px) {
   .container {
-    margin-top: 3rem;
     transform: translateX(15%);
   }
 }
