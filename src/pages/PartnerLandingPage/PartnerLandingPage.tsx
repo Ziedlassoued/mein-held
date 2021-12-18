@@ -69,7 +69,10 @@ function PartnerLandingPage(): JSX.Element {
           </div>
         </div>
         <div className={styles.contactForm}>
-          <h3>hinterlasse doch eine Bewertung</h3>
+          <p>
+            Ihre Meinung zählt für uns. Bitte nehmen Sie sich kurz Zeit und
+            erzählen Sie uns mehr
+          </p>
           <div className={styles.rating}>
             <RatingSecond />
           </div>
@@ -79,7 +82,7 @@ function PartnerLandingPage(): JSX.Element {
                 <div className={styles.inputBox}>
                   <span>Nachricht</span>
                   <textarea
-                    placeholder="Nachricht hier schreiben"
+                    placeholder="Was hat Ihnen gefallen? Was können wir verbessern?"
                     name="text"
                   ></textarea>
                 </div>
