@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../../Footer/Footer';
 import NavBar from '../../NavBar/NavBar';
 import styles from './SignUpForm.module.css';
+import Modal from '../../Modal/Modal';
 
 export interface FormInputProps {
   companyName: string;
@@ -105,6 +106,7 @@ export default function SignUpForm() {
                 </select>
                 <p> {errors.category?.message} </p>
               </div>
+
               <div className={styles.inputBox}>
                 <label className={styles.details}>Inhaber</label>
                 <input
@@ -118,27 +120,28 @@ export default function SignUpForm() {
                 <input placeholder="Email" {...register('email')} />
                 <p> {errors.email?.message} </p>
               </div>
+
               <div className={styles.inputBox}>
-                <label className={styles.details}>Telefon Nr.</label>
+                <span className={styles.details}>Telefon Nr.</span>
                 <input placeholder="Telefon Nr." {...register('phonNumber')} />
               </div>
               <div className={styles.inputBox}>
-                <label className={styles.details}>Straße</label>
+                <span className={styles.details}>Straße</span>
                 <input placeholder="Straße" {...register('street')} />
                 <p> {errors.street?.message} </p>
               </div>
               <div className={styles.inputBox}>
-                <label className={styles.details}>Haus Nr.</label>
+                <span className={styles.details}>Haus Nr.</span>
                 <input placeholder="Haus Nr." {...register('houseNumber')} />
                 <p> {errors.houseNumber?.message}</p>
               </div>
               <div className={styles.inputBox}>
-                <label className={styles.details}>Postleitzahl</label>
+                <span className={styles.details}>Postleitzahl</span>
                 <input placeholder="Postleitzahl" {...register('zip')} />
                 <p> {errors.zip?.message} </p>
               </div>
               <div className={styles.inputBox}>
-                <label className={styles.details}>Stadt</label>
+                <span className={styles.details}>Sadt</span>
                 <input placeholder="Stadt" {...register('city')} />
                 <p> {errors.city?.message} </p>
               </div>

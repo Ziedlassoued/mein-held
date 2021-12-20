@@ -3,14 +3,15 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(135deg, orange, #ededed);
   font-family: var(--font-headline);
+  background-image: url('https://images.unsplash.com/photo-1579847188804-ecba0e2ea330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvbnN0cnVjdGlvbiUyMHdvcmtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
   max-width: 700px;
   width: 100%;
-  background: var(--color-primary);
   color: var(--color-secondary);
   padding: 25px 30px;
   border-radius: 5px;
@@ -20,6 +21,7 @@
   font-size: 2rem;
   font-weight: 500;
   position: relative;
+  color: var(--color-primary);
 }
 
 .container .title::before {
@@ -29,7 +31,11 @@
   bottom: 0;
   height: 0.2rem;
   width: 3rem;
-  background: var(--color-tertiary);
+  background: var(--color-primary);
+}
+
+.container label {
+  color: var(--color-primary);
 }
 
 .container form .companyDetails {
@@ -45,10 +51,10 @@ form .btn input {
   outline: none;
   color: var(--color-primary);
   border: none;
-  background: linear-gradient(135deg, orange, #ededed);
+  background: var(--color-tertiary);
   font-family: var(--font-headline);
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
@@ -72,7 +78,7 @@ form .btn input {
 }
 
 form .btn input:hover {
-  background: linear-gradient(-135deg, orange, #ededed);
+  background: #ededed;
 }
 
 form .companyDetails .inputBox {
@@ -106,6 +112,10 @@ form .btn {
 }
 
 @media (max-width: 584px) {
+  .main {
+    background-image: url('https://images.unsplash.com/photo-1532143904893-0af5e39f2eec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmFja2dyb3VuZCUyMG9yYW5nZSUyMGJsYWNrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+  }
+
   .container {
     max-width: 100%;
   }
@@ -115,12 +125,27 @@ form .btn {
     width: 100%;
   }
 
-  .companyDetails::-webkit-scrollbar {
-    width: 0;
+  form .companyDetails .inputBox label {
+    color: var(--color-primary);
+    width: 100%;
   }
 
-  .container form .companyDetails {
-    max-height: 300px;
-    overflow-y: scroll;
+  form .companyDetails .inputBox span {
+    color: var(--color-tertiary);
+  }
+
+  form .companyDetails .inputBox p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container .title::before {
+    content: '';
+    position: absolute;
+    left: 6%;
+    bottom: 0;
+    height: 0.2rem;
+    width: 3rem;
+    background: var(--color-secondary);
   }
 }

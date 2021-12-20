@@ -52,11 +52,6 @@ function LoginPartner(): JSX.Element {
           <form onSubmit={handleSubmit}>
             <div className={styles.partnerDetails}>
               <div className={styles.inputBox}>
-                <label className={styles.details}>Firmen Name</label>
-                <input placeholder="Firmen Name" {...register('companyName')} />
-                <p>{errors.companyName?.message}</p>
-              </div>
-              <div className={styles.inputBox}>
                 <span className={styles.details}>Email</span>
                 <input
                   type="email"
@@ -76,8 +71,10 @@ function LoginPartner(): JSX.Element {
                 />
                 <p> {errors.password?.message} </p>
               </div>
-              <div className={styles.btn}>
-                <input type="submit" id="submit" value="Anmelden" />
+              <div>
+                <div className={styles.btn}>
+                  <input type="submit" id="submit" value="Anmelden" />
+                </div>
               </div>
             </div>
           </form>

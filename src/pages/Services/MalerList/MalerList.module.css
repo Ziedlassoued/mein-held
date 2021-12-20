@@ -1,7 +1,7 @@
 .container {
   background: white;
   padding-right: 3rem;
-  padding-left: 3rem;
+  padding-left: 1rem;
 }
 
 .title {
@@ -43,6 +43,7 @@
   background-color: var(--color-secondary);
   border-radius: 5%;
   font-family: var(--font-headline);
+  color: #333;
 }
 
 .teammember:hover {
@@ -58,6 +59,10 @@
   border: 4px solid orange;
   border-radius: 50%;
   margin: 0 auto;
+}
+
+.img {
+  margin-bottom: 1rem;
 }
 
 .teammember h2 {
@@ -88,7 +93,6 @@
 @media (max-width: 500px) {
   .container {
     padding-right: 0;
-    padding-left: 3rem;
   }
 
   .heading {
@@ -101,12 +105,12 @@
   }
 
   .teammember {
-    height: 200px;
+    height: 500px;
   }
 
   .teammember img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
 
   .teammember h2 {

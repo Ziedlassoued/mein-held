@@ -83,19 +83,22 @@ p {
       'd d d d'
       'a l l l';
     gap: 10px;
+    padding-top: 8px;
   }
 
   .DesktopView {
+    margin-top: 5px;
     grid-area: d;
     width: 300px;
   }
 
   .application {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    width: 100%;
   }
 
   .login {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

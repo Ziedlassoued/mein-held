@@ -32,6 +32,11 @@ function App() {
         <Route path="/DachdeckerList" element={<DachdeckerList />}></Route>
         <Route path="/SmarthomeList" element={<SmarthomeList />}></Route>
         <Route path="/MalerList" element={<MalerList />}></Route>
+        <Route
+          path="/MalerList/:partnerlandingpage"
+          element={<PartnerLandingPage />}
+        ></Route>
+
         <Route path="/KlempnerList" element={<KlempnerList />}></Route>
         <Route path="/KuechenbauList" element={<KuechenbauList />}></Route>
         <Route path="/SanitaerList" element={<SanitaerList />}></Route>
@@ -44,10 +49,7 @@ function App() {
         <Route path="/loginpartner" element={<LoginPartner />}></Route>
         <Route path="/blog" element={<Blog />}></Route>
         <Route path="/contact-us" element={<Contact />}></Route>
-        <Route
-          path="/elektrikermeister"
-          element={<PartnerLandingPage />}
-        ></Route>
+
         <Route path="/faq" element={<Faq />}></Route>
         <Route path="/schreinerdetails" element={<SchreinerDetails />}></Route>
       </Routes>
